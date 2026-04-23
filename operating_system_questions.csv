@@ -1,0 +1,48 @@
+question_id,subject_name,unit_number,topic_name,question_text,difficulty_level,requires_diagram,marks
+1,Operating System,1,Operating System,What is an operating system and explain its functions?,Medium,No,3
+2,Operating System,1,OS Basics,What are the advantages and types of operating systems?,Medium,No,3
+3,Operating System,1,OS Basics,Explain batch time-sharing and distributed operating systems.,Medium,No,3
+4,Operating System,1,Kernel,What is a kernel and what are its main functions?,Medium,No,3
+5,Operating System,1,System Calls,What are system calls and their types?,Medium,No,3
+6,Operating System,1,OS Structure,Explain different OS structures and their types.,Medium,Yes,4
+7,Operating System,2,Process,What is a process and its life cycle?,Medium,Yes,3
+8,Operating System,2,Process,What is process scheduling and its types?,Medium,No,3
+9,Operating System,2,Process,Explain process control block and its components.,Medium,No,3
+10,Operating System,2,Thread,What is a thread and its types?,Medium,No,3
+11,Operating System,2,Thread,Differentiate between process and thread.,Medium,No,3
+12,Operating System,2,Concurrency,What is concurrency and its issues?,Medium,No,3
+13,Operating System,2,Concurrency,Explain race condition and critical section problem.,Medium,Yes,4
+14,Operating System,2,Concurrency,What is mutual exclusion and how is it achieved?,Medium,No,3
+15,Operating System,2,Semaphore,What is a semaphore and its types?,Medium,No,3
+16,Operating System,2,Deadlock,What is deadlock and its necessary conditions?,Medium,No,3
+17,Operating System,2,Deadlock,Explain deadlock prevention and avoidance techniques.,Hard,Yes,5
+18,Operating System,3,CPU Scheduling,What is CPU scheduling and its objectives?,Easy,No,2
+19,Operating System,3,CPU Scheduling,Explain scheduling criteria like throughput and turnaround time.,Medium,No,3
+20,Operating System,3,CPU Scheduling,Differentiate between preemptive and non-preemptive scheduling.,Medium,No,3
+21,Operating System,3,FCFS,Explain FCFS scheduling with advantages and disadvantages.,Medium,No,3
+22,Operating System,3,SJF,Explain SJF scheduling and its types.,Medium,No,3
+23,Operating System,3,Round Robin,Explain Round Robin scheduling and time quantum.,Medium,No,3
+24,Operating System,3,Priority Scheduling,Explain priority scheduling and starvation problem.,Medium,No,3
+25,Operating System,3,CPU Scheduling,Explain multilevel queue and multilevel feedback queue scheduling.,Hard,Yes,5
+26,Operating System,4,Memory Management,What is memory management and its functions?,Medium,No,3
+27,Operating System,4,Memory Management,What is swapping and fragmentation?,Medium,No,3
+28,Operating System,4,Memory Management,Explain internal and external fragmentation.,Medium,No,3
+29,Operating System,4,Paging,What is paging and its advantages?,Medium,Yes,3
+30,Operating System,4,Segmentation,What is segmentation and its features?,Medium,Yes,3
+31,Operating System,4,Virtual Memory,What is virtual memory and how it works?,Medium,No,3
+32,Operating System,4,Memory Management,What is thrashing and working set model?,Hard,Yes,5
+33,Operating System,4,Page Replacement,What is page replacement and its types?,Medium,No,3
+34,Operating System,4,Page Replacement,Explain FIFO LRU and optimal page replacement algorithms.,Hard,No,5
+35,Operating System,4,Memory Allocation,What is memory allocation and its types?,Medium,No,3
+36,Operating System,5,I/O System,What is I/O system and its functions?,Medium,No,3
+37,Operating System,5,I/O System,Explain buffering and spooling.,Medium,No,3
+38,Operating System,5,I/O System,What is interrupt and its types?,Medium,No,3
+39,Operating System,5,I/O System,Explain DMA and polling mechanisms.,Medium,Yes,3
+40,Operating System,5,Disk Scheduling,What is disk scheduling and its algorithms?,Medium,No,3
+41,Operating System,5,Disk Scheduling,Explain SSTF SCAN and C-SCAN algorithms.,Hard,Yes,5
+42,Operating System,5,RAID,What is RAID and its levels?,Medium,No,3
+43,Operating System,5,File System,What is file system and its types?,Medium,No,3
+44,Operating System,5,File System,Explain file operations and file access methods.,Medium,No,3
+45,Operating System,5,File System,Explain sequential and direct file access.,Medium,No,3
+46,Operating System,5,File System,What is file allocation and its types?,Medium,Yes,3
+47,Operating System,5,Directory,What is directory structure and its types?,Medium,No,3
