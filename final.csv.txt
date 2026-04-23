@@ -1,0 +1,105 @@
+question_id,subject_name,unit_number,topic_name,question_text,difficulty_level,requires_diagram,marks
+1,Operating System,1,Operating System,What is operating system?,Easy,Yes,1
+2,Operating System,1,Operating System,Explain operating system with example.,Medium,No,3
+3,Operating System,1,OS Basics,What are the advantages of operating system?,Easy,No,2
+4,Operating System,1,OS Basics,What is batch operating system?,Easy,No,2
+5,Operating System,1,OS Basics,What is time-sharing operating system?,Easy,No,2
+6,Operating System,1,OS Basics,What is distributed operating system?,Medium,No,3
+7,Operating System,1,Kernel,What is kernel?,Easy,No,1
+8,Operating System,1,Kernel,Explain kernel with example.,Medium,No,3
+9,Operating System,1,System Calls,What is system calls?,Easy,No,1
+10,Operating System,1,System Calls,Explain system calls with example.,Medium,No,3
+11,Operating System,1,OS Structure,What is os structure?,Easy,No,1
+12,Operating System,1,OS Structure,Explain os structure with example.,Medium,No,3
+13,Operating System,1,OS Structure,What is microkernel architecture?,Medium,Yes,3
+14,Operating System,1,OS Structure,What is layered architecture in OS?,Medium,Yes,3
+15,Operating System,1,Types of OS,What is types of os?,Easy,No,1
+16,Operating System,1,Types of OS,Explain types of os with example.,Medium,No,3
+
+17,Operating System,2,Process,What is process?,Easy,Yes,1
+18,Operating System,2,Process,Explain process with example.,Medium,No,3
+19,Operating System,2,Process,What is process scheduling?,Easy,No,2
+20,Operating System,2,Process,What are different states of a process?,Medium,Yes,3
+21,Operating System,2,Process,What is process control block?,Medium,No,3
+22,Operating System,2,Thread,What is thread?,Easy,No,1
+23,Operating System,2,Thread,Explain thread with example.,Medium,No,3
+24,Operating System,2,Thread,What are benefits of multithreading?,Medium,No,3
+25,Operating System,2,Thread,What is difference between process and thread?,Medium,No,3
+26,Operating System,2,Concurrency,What is concurrency?,Easy,No,1
+27,Operating System,2,Concurrency,Explain concurrency with example.,Medium,No,3
+28,Operating System,2,Concurrency,What is race condition?,Medium,No,3
+29,Operating System,2,Concurrency,What is critical section?,Medium,Yes,3
+30,Operating System,2,Concurrency,Explain mutual exclusion.,Medium,No,3
+31,Operating System,2,Semaphore,What is semaphore?,Easy,No,1
+32,Operating System,2,Semaphore,Explain semaphore with example.,Medium,No,3
+33,Operating System,2,Deadlock,What is deadlock?,Easy,No,1
+34,Operating System,2,Deadlock,Explain deadlock with example.,Medium,No,3
+35,Operating System,2,Deadlock,What are necessary conditions for deadlock?,Medium,No,3
+36,Operating System,2,Deadlock,What is deadlock prevention?,Hard,Yes,5
+37,Operating System,2,Deadlock,What is deadlock avoidance?,Hard,Yes,5
+
+38,Operating System,3,CPU Scheduling,What is cpu scheduling?,Easy,Yes,1
+39,Operating System,3,CPU Scheduling,Explain cpu scheduling with example.,Medium,No,3
+40,Operating System,3,CPU Scheduling,What is throughput in scheduling?,Easy,No,2
+41,Operating System,3,CPU Scheduling,What is turnaround time?,Easy,No,2
+42,Operating System,3,CPU Scheduling,What is waiting time?,Easy,No,2
+43,Operating System,3,CPU Scheduling,What is response time?,Easy,No,2
+44,Operating System,3,CPU Scheduling,Compare preemptive and non-preemptive scheduling.,Medium,No,3
+45,Operating System,3,CPU Scheduling,What is multilevel queue scheduling?,Hard,Yes,5
+46,Operating System,3,CPU Scheduling,What is multilevel feedback queue?,Hard,Yes,5
+47,Operating System,3,FCFS,What is fcfs?,Easy,No,1
+48,Operating System,3,FCFS,Explain fcfs with example.,Medium,No,3
+49,Operating System,3,SJF,What is sjf?,Easy,No,1
+50,Operating System,3,SJF,Explain sjf with example.,Medium,No,3
+51,Operating System,3,Round Robin,What is round robin?,Easy,No,1
+52,Operating System,3,Round Robin,Explain round robin with example.,Medium,No,3
+53,Operating System,3,Priority Scheduling,What is priority scheduling?,Easy,No,1
+54,Operating System,3,Priority Scheduling,Explain priority scheduling with example.,Medium,No,3
+
+55,Operating System,4,Paging,What is paging?,Easy,Yes,1
+56,Operating System,4,Paging,Explain paging with example.,Medium,No,3
+57,Operating System,4,Segmentation,What is segmentation?,Easy,No,1
+58,Operating System,4,Segmentation,Explain segmentation with example.,Medium,No,3
+59,Operating System,4,Virtual Memory,What is virtual memory?,Easy,No,1
+60,Operating System,4,Virtual Memory,Explain virtual memory with example.,Medium,No,3
+61,Operating System,4,Memory Management,What is swapping?,Easy,No,2
+62,Operating System,4,Memory Management,What is fragmentation?,Easy,No,2
+63,Operating System,4,Memory Management,Explain internal fragmentation.,Medium,No,3
+64,Operating System,4,Memory Management,Explain external fragmentation.,Medium,No,3
+65,Operating System,4,Memory Management,What is thrashing?,Hard,Yes,5
+66,Operating System,4,Memory Management,What is working set model?,Hard,Yes,5
+67,Operating System,4,Page Replacement,What is page replacement?,Easy,No,1
+68,Operating System,4,Page Replacement,Explain page replacement with example.,Medium,No,3
+69,Operating System,4,Page Replacement,Explain FIFO page replacement.,Medium,No,3
+70,Operating System,4,Page Replacement,Explain LRU page replacement.,Medium,No,3
+71,Operating System,4,Page Replacement,Explain optimal page replacement.,Hard,No,5
+72,Operating System,4,Memory Allocation,What is memory allocation?,Easy,No,1
+73,Operating System,4,Memory Allocation,Explain memory allocation with example.,Medium,No,3
+
+74,Operating System,5,I/O System,What is i/o system?,Easy,Yes,1
+75,Operating System,5,I/O System,Explain i/o system with example.,Medium,No,3
+76,Operating System,5,I/O System,What is buffering in OS?,Easy,No,2
+77,Operating System,5,I/O System,What is spooling?,Medium,No,3
+78,Operating System,5,I/O System,What is device driver?,Easy,No,2
+79,Operating System,5,I/O System,What is interrupt?,Easy,No,2
+80,Operating System,5,I/O System,Explain DMA (Direct Memory Access).,Medium,Yes,3
+81,Operating System,5,I/O System,What is polling in OS?,Medium,No,3
+82,Operating System,5,Disk Scheduling,What is disk scheduling?,Easy,No,1
+83,Operating System,5,Disk Scheduling,Explain disk scheduling with example.,Medium,No,3
+84,Operating System,5,Disk Scheduling,What is SSTF scheduling?,Medium,No,3
+85,Operating System,5,Disk Scheduling,What is SCAN algorithm?,Medium,Yes,3
+86,Operating System,5,Disk Scheduling,What is C-SCAN algorithm?,Medium,Yes,3
+87,Operating System,5,Disk Scheduling,Compare SCAN and SSTF.,Hard,Yes,5
+88,Operating System,5,RAID,What is raid?,Easy,No,1
+89,Operating System,5,RAID,Explain raid with example.,Medium,No,3
+90,Operating System,5,File System,What is file system?,Easy,No,1
+91,Operating System,5,File System,Explain file system with example.,Medium,No,3
+92,Operating System,5,File System,What is file descriptor?,Medium,No,3
+93,Operating System,5,File System,What are file operations?,Easy,No,2
+94,Operating System,5,File System,What is file access method?,Medium,No,3
+95,Operating System,5,File System,What is sequential file access?,Easy,No,2
+96,Operating System,5,File System,What is direct file access?,Medium,No,3
+97,Operating System,5,File System,What is indexed file allocation?,Hard,Yes,5
+98,Operating System,5,File System,What is contiguous file allocation?,Medium,No,3
+99,Operating System,5,Directory,What is directory?,Easy,No,1
+100,Operating System,5,Directory,Explain directory with example.,Medium,No,3
