@@ -1,34 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sessional Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
 <!-- HERO -->
 <section class="hero">
   <h1>SESSIONAL HUB</h1>
   <p>AI Powered Test Generation & Evaluation</p>
-  <div class="scroll-down">↓</div>
+  <div class="scroll-indicator">Scroll ↓</div>
 </section>
 
 <!-- MODE SELECT -->
-<section class="mode-section">
-  <div class="mode-card" onclick="openMode('generate')">
+<section class="modes">
+  <div class="mode generate" onclick="openPage('generatePage')">
     <h2>Generate Paper</h2>
   </div>
 
-  <div class="mode-card" onclick="openMode('evaluate')">
+  <div class="mode evaluate" onclick="openPage('evaluatePage')">
     <h2>Evaluate Answers</h2>
   </div>
 </section>
 
-<!-- GENERATE FULLSCREEN -->
-<section id="generatePage" class="full-page hidden">
-  <h1>Generate Paper</h1>
-  <button onclick="goBack()">← Back</button>
+<!-- GENERATE PAGE -->
+<section id="generatePage" class="page hidden">
+  <div class="page-content">
+    <h1>Generate Paper</h1>
+
+    <div class="form">
+      <input placeholder="Subject">
+      <input placeholder="Unit">
+      <input placeholder="Difficulty">
+      <input placeholder="Marks">
+    </div>
+
+    <button class="cta">Generate</button>
+    <button class="back" onclick="closePage()">Back</button>
+  </div>
 </section>
 
-<!-- EVALUATE FULLSCREEN -->
-<section id="evaluatePage" class="full-page hidden">
-  <h1>Evaluate Answers</h1>
-  <button onclick="goBack()">← Back</button>
+<!-- EVALUATE PAGE -->
+<section id="evaluatePage" class="page hidden">
+  <div class="page-content">
+    <h1>Evaluate Answers</h1>
+
+    <div class="form">
+      <select>
+        <option>Select Subject</option>
+        <option>DBMS</option>
+        <option>OS</option>
+      </select>
+
+      <input placeholder="Type (Theory)">
+      <input type="file">
+    </div>
+
+    <button class="cta">Evaluate</button>
+    <button class="back" onclick="closePage()">Back</button>
+  </div>
 </section>
 
 <script src="script.js"></script>
 </body>
+</html>
