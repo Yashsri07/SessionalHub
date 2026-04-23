@@ -1,0 +1,34 @@
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>SESSIONAL HUB</h1>
+  <p>AI Powered Test Generation & Evaluation</p>
+  <div class="scroll-down">↓</div>
+</section>
+
+<!-- MODE SELECT -->
+<section class="mode-section">
+  <div class="mode-card" onclick="openMode('generate')">
+    <h2>Generate Paper</h2>
+  </div>
+
+  <div class="mode-card" onclick="openMode('evaluate')">
+    <h2>Evaluate Answers</h2>
+  </div>
+</section>
+
+<!-- GENERATE FULLSCREEN -->
+<section id="generatePage" class="full-page hidden">
+  <h1>Generate Paper</h1>
+  <button onclick="goBack()">← Back</button>
+</section>
+
+<!-- EVALUATE FULLSCREEN -->
+<section id="evaluatePage" class="full-page hidden">
+  <h1>Evaluate Answers</h1>
+  <button onclick="goBack()">← Back</button>
+</section>
+
+<script src="script.js"></script>
+</body>
