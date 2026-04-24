@@ -1,0 +1,251 @@
+solution_id,subject_name,unit_number,topic_name,difficulty_level,requires_diagram,marks,question_text,solution_text
+1,Operating System,2,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+2,Operating System,3,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+3,Operating System,4,General OS,Easy,No,2,What is process?,A process is a program in execution.
+4,Operating System,5,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+5,Operating System,1,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+6,Operating System,2,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+7,Operating System,3,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+8,Operating System,4,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+9,Operating System,5,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+10,Operating System,1,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+11,Operating System,2,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+12,Operating System,3,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+13,Operating System,4,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+14,Operating System,5,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+15,Operating System,1,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+16,Operating System,2,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+17,Operating System,3,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+18,Operating System,4,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+19,Operating System,5,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+20,Operating System,1,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+21,Operating System,2,General OS,Easy,No,2,Explain file system.,File system manages storage.
+22,Operating System,3,General OS,Easy,No,2,What is directory?,Directory organizes files.
+23,Operating System,4,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+24,Operating System,5,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+25,Operating System,1,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+26,Operating System,2,General OS,Easy,No,2,What is process?,A process is a program in execution.
+27,Operating System,3,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+28,Operating System,4,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+29,Operating System,5,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+30,Operating System,1,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+31,Operating System,2,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+32,Operating System,3,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+33,Operating System,4,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+34,Operating System,5,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+35,Operating System,1,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+36,Operating System,2,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+37,Operating System,3,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+38,Operating System,4,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+39,Operating System,5,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+40,Operating System,1,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+41,Operating System,2,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+42,Operating System,3,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+43,Operating System,4,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+44,Operating System,5,General OS,Easy,No,2,Explain file system.,File system manages storage.
+45,Operating System,1,General OS,Easy,No,2,What is directory?,Directory organizes files.
+46,Operating System,2,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+47,Operating System,3,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+48,Operating System,4,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+49,Operating System,5,General OS,Easy,No,2,What is process?,A process is a program in execution.
+50,Operating System,1,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+51,Operating System,2,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+52,Operating System,3,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+53,Operating System,4,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+54,Operating System,5,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+55,Operating System,1,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+56,Operating System,2,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+57,Operating System,3,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+58,Operating System,4,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+59,Operating System,5,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+60,Operating System,1,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+61,Operating System,2,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+62,Operating System,3,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+63,Operating System,4,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+64,Operating System,5,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+65,Operating System,1,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+66,Operating System,2,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+67,Operating System,3,General OS,Easy,No,2,Explain file system.,File system manages storage.
+68,Operating System,4,General OS,Easy,No,2,What is directory?,Directory organizes files.
+69,Operating System,5,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+70,Operating System,1,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+71,Operating System,2,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+72,Operating System,3,General OS,Easy,No,2,What is process?,A process is a program in execution.
+73,Operating System,4,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+74,Operating System,5,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+75,Operating System,1,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+76,Operating System,2,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+77,Operating System,3,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+78,Operating System,4,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+79,Operating System,5,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+80,Operating System,1,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+81,Operating System,2,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+82,Operating System,3,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+83,Operating System,4,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+84,Operating System,5,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+85,Operating System,1,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+86,Operating System,2,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+87,Operating System,3,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+88,Operating System,4,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+89,Operating System,5,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+90,Operating System,1,General OS,Easy,No,2,Explain file system.,File system manages storage.
+91,Operating System,2,General OS,Easy,No,2,What is directory?,Directory organizes files.
+92,Operating System,3,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+93,Operating System,4,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+94,Operating System,5,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+95,Operating System,1,General OS,Easy,No,2,What is process?,A process is a program in execution.
+96,Operating System,2,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+97,Operating System,3,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+98,Operating System,4,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+99,Operating System,5,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+100,Operating System,1,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+101,Operating System,2,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+102,Operating System,3,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+103,Operating System,4,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+104,Operating System,5,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+105,Operating System,1,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+106,Operating System,2,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+107,Operating System,3,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+108,Operating System,4,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+109,Operating System,5,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+110,Operating System,1,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+111,Operating System,2,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+112,Operating System,3,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+113,Operating System,4,General OS,Easy,No,2,Explain file system.,File system manages storage.
+114,Operating System,5,General OS,Easy,No,2,What is directory?,Directory organizes files.
+115,Operating System,1,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+116,Operating System,2,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+117,Operating System,3,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+118,Operating System,4,General OS,Easy,No,2,What is process?,A process is a program in execution.
+119,Operating System,5,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+120,Operating System,1,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+121,Operating System,2,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+122,Operating System,3,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+123,Operating System,4,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+124,Operating System,5,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+125,Operating System,1,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+126,Operating System,2,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+127,Operating System,3,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+128,Operating System,4,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+129,Operating System,5,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+130,Operating System,1,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+131,Operating System,2,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+132,Operating System,3,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+133,Operating System,4,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+134,Operating System,5,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+135,Operating System,1,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+136,Operating System,2,General OS,Easy,No,2,Explain file system.,File system manages storage.
+137,Operating System,3,General OS,Easy,No,2,What is directory?,Directory organizes files.
+138,Operating System,4,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+139,Operating System,5,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+140,Operating System,1,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+141,Operating System,2,General OS,Easy,No,2,What is process?,A process is a program in execution.
+142,Operating System,3,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+143,Operating System,4,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+144,Operating System,5,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+145,Operating System,1,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+146,Operating System,2,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+147,Operating System,3,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+148,Operating System,4,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+149,Operating System,5,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+150,Operating System,1,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+151,Operating System,2,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+152,Operating System,3,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+153,Operating System,4,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+154,Operating System,5,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+155,Operating System,1,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+156,Operating System,2,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+157,Operating System,3,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+158,Operating System,4,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+159,Operating System,5,General OS,Easy,No,2,Explain file system.,File system manages storage.
+160,Operating System,1,General OS,Easy,No,2,What is directory?,Directory organizes files.
+161,Operating System,2,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+162,Operating System,3,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+163,Operating System,4,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+164,Operating System,5,General OS,Easy,No,2,What is process?,A process is a program in execution.
+165,Operating System,1,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+166,Operating System,2,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+167,Operating System,3,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+168,Operating System,4,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+169,Operating System,5,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+170,Operating System,1,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+171,Operating System,2,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+172,Operating System,3,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+173,Operating System,4,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+174,Operating System,5,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+175,Operating System,1,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+176,Operating System,2,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+177,Operating System,3,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+178,Operating System,4,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+179,Operating System,5,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+180,Operating System,1,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+181,Operating System,2,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+182,Operating System,3,General OS,Easy,No,2,Explain file system.,File system manages storage.
+183,Operating System,4,General OS,Easy,No,2,What is directory?,Directory organizes files.
+184,Operating System,5,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+185,Operating System,1,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+186,Operating System,2,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+187,Operating System,3,General OS,Easy,No,2,What is process?,A process is a program in execution.
+188,Operating System,4,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+189,Operating System,5,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+190,Operating System,1,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+191,Operating System,2,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+192,Operating System,3,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+193,Operating System,4,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+194,Operating System,5,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+195,Operating System,1,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+196,Operating System,2,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+197,Operating System,3,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+198,Operating System,4,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+199,Operating System,5,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+200,Operating System,1,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+201,Operating System,2,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+202,Operating System,3,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+203,Operating System,4,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+204,Operating System,5,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+205,Operating System,1,General OS,Easy,No,2,Explain file system.,File system manages storage.
+206,Operating System,2,General OS,Easy,No,2,What is directory?,Directory organizes files.
+207,Operating System,3,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+208,Operating System,4,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+209,Operating System,5,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+210,Operating System,1,General OS,Easy,No,2,What is process?,A process is a program in execution.
+211,Operating System,2,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+212,Operating System,3,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+213,Operating System,4,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+214,Operating System,5,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+215,Operating System,1,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+216,Operating System,2,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+217,Operating System,3,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+218,Operating System,4,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+219,Operating System,5,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+220,Operating System,1,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+221,Operating System,2,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+222,Operating System,3,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+223,Operating System,4,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+224,Operating System,5,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+225,Operating System,1,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+226,Operating System,2,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+227,Operating System,3,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
+228,Operating System,4,General OS,Easy,No,2,Explain file system.,File system manages storage.
+229,Operating System,5,General OS,Easy,No,2,What is directory?,Directory organizes files.
+230,Operating System,1,General OS,Easy,No,2,What is operating system?,An operating system (OS) manages hardware and software resources and provides an interface between user and computer.
+231,Operating System,2,General OS,Easy,No,2,Explain kernel with example.,"Kernel is the core of OS that manages CPU, memory, and devices."
+232,Operating System,3,General OS,Easy,No,2,What is system calls?,System calls allow programs to request services from OS.
+233,Operating System,4,General OS,Easy,No,2,What is process?,A process is a program in execution.
+234,Operating System,5,General OS,Easy,No,2,Explain thread with example.,A thread is the smallest unit of execution within a process.
+235,Operating System,1,General OS,Easy,No,2,What is concurrency?,Concurrency is execution of multiple tasks simultaneously.
+236,Operating System,2,General OS,Easy,No,2,Explain semaphore.,Semaphore controls access to shared resources.
+237,Operating System,3,General OS,Easy,No,2,What is deadlock?,Deadlock is a situation where processes wait indefinitely.
+238,Operating System,4,General OS,Easy,No,2,What is cpu scheduling?,CPU scheduling selects which process runs next.
+239,Operating System,5,General OS,Easy,No,2,Explain fcfs.,FCFS executes processes in arrival order.
+240,Operating System,1,General OS,Easy,No,2,What is sjf?,SJF selects shortest job first.
+241,Operating System,2,General OS,Easy,No,2,Explain round robin.,Round Robin gives equal time to each process.
+242,Operating System,3,General OS,Easy,No,2,What is priority scheduling?,Priority scheduling executes higher priority first.
+243,Operating System,4,General OS,Easy,No,2,What is paging?,Paging divides memory into pages.
+244,Operating System,5,General OS,Easy,No,2,Explain segmentation.,Segmentation divides memory logically.
+245,Operating System,1,General OS,Easy,No,2,What is virtual memory?,Virtual memory uses disk as RAM extension.
+246,Operating System,2,General OS,Easy,No,2,Explain page replacement.,Page replacement replaces pages in memory.
+247,Operating System,3,General OS,Easy,No,2,What is memory allocation?,Memory allocation assigns memory to processes.
+248,Operating System,4,General OS,Easy,No,2,What is i/o system?,I/O system handles device communication.
+249,Operating System,5,General OS,Easy,No,2,Explain disk scheduling.,Disk scheduling orders disk requests.
+250,Operating System,1,General OS,Easy,No,2,What is raid?,RAID combines disks for reliability.
