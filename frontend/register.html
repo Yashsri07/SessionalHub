@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Register | SessionalHub</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Auth/Form CSS -->
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+
+    <!-- Auth Page Container -->
+    <main class="auth-page">
+
+        <!-- Left Branding Section -->
+        <section class="auth-banner">
+            <div class="auth-banner-content">
+                <span class="auth-tag">AI-Powered Academic Platform</span>
+
+                <h1>SessionalHub</h1>
+
+                <p class="auth-description">
+                    Smart assessment platform for automated paper generation,
+                    answer evaluation, syllabus tracking, and academic analytics.
+                </p>
+
+                <a href="index.html" class="outline-btn">
+                    Back To Home
+                </a>
+            </div>
+        </section>
+
+        <!-- Right Form Section -->
+        <section class="auth-section">
+
+            <div class="auth-card">
+
+                <!-- Form Header -->
+                <div class="auth-header">
+                    <h2>Create Account</h2>
+                    <p>
+                        Register to continue to SessionalHub
+                    </p>
+                </div>
+
+                <!-- Registration Form -->
+                <form id="registerForm">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            class="form-input"
+                            placeholder="Enter full name"
+                        >
+                    </div>
+
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label>Username</label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            class="form-input"
+                            placeholder="Choose username"
+                        >
+
+                        <!-- Live Username Message -->
+                        <span
+                            id="usernameMessage"
+                            class="field-message"
+                        ></span>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="form-group">
+                        <label>Register As</label>
+
+                        <select id="role" class="form-input">
+                            <option value="">Select role</option>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                        </select>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label>Gmail ID</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            class="form-input"
+                            placeholder="Enter Gmail ID"
+                        >
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label>Create Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            class="form-input"
+                            placeholder="Create password"
+                        >
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            class="form-input"
+                            placeholder="Confirm password"
+                        >
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="auth-btn">
+                        Register
+                    </button>
+
+                    <!-- Form Message -->
+                    <p id="formMessage" class="form-message"></p>
+
+                </form>
+
+                <!-- Footer -->
+                <div class="auth-footer">
+                    Already registered?
+                    <a href="login.html">Login</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Register JS -->
+    <script src="js/register.js"></script>
+
+</body>
+</html>
