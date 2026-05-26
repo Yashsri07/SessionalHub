@@ -1,0 +1,55 @@
+import express from 'express';
+import cors from 'cors';
+
+import db from './config/dbConnection.js';
+import authRoutes from './routes/authRoutes.js';
+
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+
+db.run(`
+    CREATE TABLE IF NOT EXISTS users(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        full_name VARCHAR(50),
+        username VARCHAR(50) UNIQUE,
+        role VARCHAR(50),
+        gmail VARCHAR(50),
+        password VARCHAR(50)
+    )
+`);
+
+app.use('/api/auth', authRoutes);
+
+// ==========================
+// PROTECTED ROUTE
+// ==========================
+
+// app.get(
+//     "/api/protected/dashboard",
+
+//     authenticateToken,
+
+//     (req, res) => {
+
+//         res.json({
+
+//             message: "Protected dashboard accessed",
+
+//             loggedInUser: req.user
+
+//         });
+
+//     }
+// );
+
+app.get('/users', (req, res) => {
+  db.all('SELECT * FROM users', [], (err, rows) => {
+    res.json(rows);
+  });
+});
+
+app.listen(8000, () => {
+  console.log('server listen on port http://127.0.0.1:8000');
+});
