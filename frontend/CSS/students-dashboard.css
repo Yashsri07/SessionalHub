@@ -1,0 +1,334 @@
+/* =========================
+   STUDENT DASHBOARD LAYOUT
+========================= */
+
+.student-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f7fb;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 280px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    border-right: 1px solid #dbe4ef;
+}
+
+/* Logo */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+.logo-box {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sidebar-logo h2 {
+    color: #0f172a;
+    font-size: 20px;
+}
+
+/* =========================
+   SIDEBAR MENU
+========================= */
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.menu-item {
+    margin-bottom: 12px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    color: #334155;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.menu-item:hover {
+    background: #eef4ff;
+    color: #2563eb;
+}
+
+/* Active Menu */
+
+.menu-item.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-btn {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 12px;
+    background: #dc2626;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    flex: 1;
+    padding: 34px;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.page-title {
+    color: #0f172a;
+    font-size: 52px;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    color: #64748b;
+    font-size: 20px;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 34px;
+}
+
+.stat-card {
+    padding: 28px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.stat-card h3 {
+    margin-bottom: 12px;
+    color: #64748b;
+    font-size: 18px;
+}
+
+.stat-card h2 {
+    color: #0f172a;
+    font-size: 48px;
+}
+
+/* =========================
+   CONTENT GRID
+========================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+    margin-bottom: 34px;
+}
+
+.content-card {
+    padding: 30px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.content-card h2 {
+    margin-bottom: 22px;
+    color: #0f172a;
+    font-size: 34px;
+}
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-item {
+    padding: 18px;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #334155;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.action-btn {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.action-btn:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.section-title {
+    margin-bottom: 24px;
+    color: #0f172a;
+    font-size: 36px;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.subject-card {
+    padding: 26px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.subject-card h3 {
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-size: 24px;
+}
+
+.subject-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .stats-grid,
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .student-dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .stats-grid,
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 38px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
