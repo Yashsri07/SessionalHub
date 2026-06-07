@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | SessionalHub</title>
+
+    <link rel="stylesheet" href="css/students-dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>SessionalHub</h2>
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li class="active">
+                    <a href="#" onclick="showSection('dashboardSection', this)">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showSection('paperSection', this)">
+                        Generate Paper
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showSection('evaluationSection', this)">
+                        Answer Evaluation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showSection('subjectsSection', this)">
+                        Subjects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showSection('syllabusSection', this)">
+                        Syllabus
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showSection('notesSection', this)">
+                        Notes
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showSection('pyqSection', this)">
+                        PYQs
+                    </a>
+                </li>
+
+                <li class="logout">
+                    <a href="#" onclick="logout()">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Student Dashboard</h1>
+
+                <p>
+                    Welcome back to SessionalHub
+                </p>
+
+            </div>
+
+            <div class="profile" id="profileBtn">
+
+                <img
+                    src="https://ui-avatars.com/api/?name=Student"
+                    alt="Profile"
+                >
+
+                <div>
+
+                    <h4>Yash</h4>
+
+                    <span>Year 3 Student</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
+
+        <section id="dashboardSection" class="content-section">
+
+            <!-- Stats Cards -->
+<section class="cards">
+
+    <div class="card">
+        <h3>Subjects</h3>
+        <p id="subjectsCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Notes</h3>
+        <p id="notesCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>PYQs</h3>
+        <p id="pyqsCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Generated Papers</h3>
+        <p id="papersCount">0</p>
+    </div>
+
+</section>
+
+
+            <section class="dashboard-section">
+
+                <h2>Quick Actions</h2>
+
+                <div class="action-grid">
+
+                    <div class="action-card">
+                        Generate New Paper
+                    </div>
+
+                    <div class="action-card">
+                        Evaluate Answer Sheet
+                    </div>
+
+                    <div class="action-card">
+                        View Notes
+                    </div>
+
+                    <div class="action-card">
+                        View PYQs
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- GENERATE PAPER -->
+
+        <section
+            id="paperSection"
+            class="content-section hidden">
+
+            <h2>Generate Paper</h2>
+
+            <div class="activity-box">
+
+                AI Question Paper Generator
+                will come here.
+
+            </div>
+
+        </section>
+
+
+        <!-- ANSWER EVALUATION -->
+
+        <section
+            id="evaluationSection"
+            class="content-section hidden">
+
+            <h2>Answer Evaluation</h2>
+
+            <div class="activity-box">
+
+                Upload Question Paper
+                and Answer Sheet here.
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECTS -->
+
+        <section
+            id="subjectsSection"
+            class="content-section hidden">
+
+            <h2>Subjects</h2>
+
+            <div class="activity-box">
+
+                <p>DBMS</p>
+                <p>Operating System</p>
+                <p>Computer Network</p>
+                <p>Java</p>
+                <p>Python</p>
+                <p>Software Engineering</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SYLLABUS -->
+
+        <section
+            id="syllabusSection"
+            class="content-section hidden">
+
+            <h2>Syllabus</h2>
+
+            <div class="activity-box">
+
+                Year Wise Syllabus
+                will appear here.
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTES -->
+
+        <section
+            id="notesSection"
+            class="content-section hidden">
+
+            <h2>Notes</h2>
+
+            <div class="activity-box">
+
+                Teacher Uploaded Notes
+
+            </div>
+
+        </section>
+
+
+        <!-- PYQs -->
+
+        <section
+            id="pyqSection"
+            class="content-section hidden">
+
+            <h2>Previous Year Papers</h2>
+
+            <div class="activity-box">
+
+                Previous Year Papers
+                will appear here.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PROFILE MODAL -->
+
+    <div
+        id="profileModal"
+        class="profile-modal">
+
+        <h3>Yash</h3>
+
+        <p>Year 3 Student</p>
+
+        <hr>
+
+        <br>
+
+        <button class="modal-btn">
+            Edit Profile
+        </button>
+
+    </div>
+
+    <script src="js/student-dashboard.js"></script>
+
+</body>
+
+</html>

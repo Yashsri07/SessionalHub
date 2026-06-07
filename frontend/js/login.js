@@ -93,7 +93,7 @@ loginForm.addEventListener("submit", async (event) => {
                 if (data.role === "student") {
 
                     window.location.href =
-                        "students-dashboard.html";
+                        "student-dashboard.html";
 
                 } else if (data.role === "teacher") {
 
