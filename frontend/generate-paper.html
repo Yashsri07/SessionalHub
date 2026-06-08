@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/generate-paper.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="main">
+        <div class="topbar">
+          <div class="topbar-title">Generate Question Paper</div>
+          <div style="display: flex; align-items: center; gap: 10px">
+            <div style="text-align: right">
+              <div style="font-size: 13px; font-weight: 500; color: #111827">User</div>
+              <div style="font-size: 11px; color: #6b7280">3rd Year Student</div>
+            </div>
+            <div class="avatar">ST</div>
+          </div>
+        </div>
+
+        <div class="content">
+          <!-- Step 1 -->
+          <div id="step1">
+            <div class="step-indicator">Step 1 of 3</div>
+            <div class="step-title">Select a subject</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 33%"></div></div>
+            <div class="subject-grid">
+              <div class="subject-card selected" data-s="DBMS">
+                <div class="subj-name">DBMS</div>
+                <div class="subj-meta">CS401 · 4 units</div>
+              </div>
+              <div class="subject-card" data-s="Operating System">
+                <div class="subj-name">Operating System</div>
+                <div class="subj-meta">CS402 · 4 units</div>
+              </div>
+              <div class="subject-card" data-s="Computer Networks">
+                <div class="subj-name">Computer Networks</div>
+                <div class="subj-meta">CS403 · 4 units</div>
+              </div>
+              <div class="subject-card" data-s="Java">
+                <div class="subj-name">Java</div>
+                <div class="subj-meta">CS404 · 4 units</div>
+              </div>
+              <div class="subject-card" data-s="Python">
+                <div class="subj-name">Python</div>
+                <div class="subj-meta">CS405 · 3 units</div>
+              </div>
+              <div class="subject-card" data-s="Software Engineering">
+                <div class="subj-name">Software Engineering</div>
+                <div class="subj-meta">CS406 · 4 units</div>
+              </div>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-primary" onclick="goStep(2)">
+                Continue <i class="ti ti-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div id="step2" class="hidden">
+            <div class="step-indicator">Step 2 of 3</div>
+            <div class="step-title">
+              Select units / topics — <span id="subjectLabel">DBMS</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 66%"></div></div>
+            <div class="unit-block">
+              <div class="unit-header">
+                <input
+                  type="checkbox"
+                  id="u1"
+                  checked
+                  onchange="toggleTopics('u1topics', this.checked)"
+                />
+                <label for="u1">Unit 1: Introduction to DBMS</label>
+              </div>
+              <div class="topics-list" id="u1topics">
+                <div class="topic-item">
+                  <input type="checkbox" id="t1" checked /><label for="t1">Database concepts</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t2" checked /><label for="t2">DBMS architecture</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t3" checked /><label for="t3">Data models</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t4" checked /><label for="t4">ER model</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t5" checked /><label for="t5">Extended ER</label>
+                </div>
+              </div>
+            </div>
+            <div class="unit-block">
+              <div class="unit-header">
+                <input type="checkbox" id="u2" onchange="toggleTopics('u2topics', this.checked)" />
+                <label for="u2">Unit 2: Relational Model</label>
+              </div>
+              <div class="topics-list hidden" id="u2topics">
+                <div class="topic-item">
+                  <input type="checkbox" id="t6" /><label for="t6">Relational algebra</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t7" /><label for="t7">SQL basics</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t8" /><label for="t8">Joins & constraints</label>
+                </div>
+              </div>
+            </div>
+            <div class="unit-block">
+              <div class="unit-header">
+                <input type="checkbox" id="u3" onchange="toggleTopics('u3topics', this.checked)" />
+                <label for="u3">Unit 3: Normalization</label>
+              </div>
+              <div class="topics-list hidden" id="u3topics">
+                <div class="topic-item">
+                  <input type="checkbox" id="t9" /><label for="t9">1NF, 2NF, 3NF</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t10" /><label for="t10">BCNF</label>
+                </div>
+              </div>
+            </div>
+            <div class="unit-block">
+              <div class="unit-header">
+                <input type="checkbox" id="u4" onchange="toggleTopics('u4topics', this.checked)" />
+                <label for="u4">Unit 4: Transactions</label>
+              </div>
+              <div class="topics-list hidden" id="u4topics">
+                <div class="topic-item">
+                  <input type="checkbox" id="t11" /><label for="t11">ACID properties</label>
+                </div>
+                <div class="topic-item">
+                  <input type="checkbox" id="t12" /><label for="t12">Concurrency control</label>
+                </div>
+              </div>
+            </div>
+            <div class="btn-row" style="margin-top: 1.25rem">
+              <button class="btn btn-ghost" onclick="goStep(1)">
+                <i class="ti ti-arrow-left" aria-hidden="true"></i> Back
+              </button>
+              <button class="btn btn-primary" onclick="goStep(3)">
+                Continue <i class="ti ti-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div id="step3" class="hidden">
+            <div class="step-indicator">Step 3 of 3</div>
+            <div class="step-title">Paper settings</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+            <div style="font-size: 13px; font-weight: 500; color: #6b7280; margin-bottom: 6px">
+              DBMS · 5 topics selected
+            </div>
+            <div class="tags-row">
+              <span class="tag">Database concepts</span>
+              <span class="tag">DBMS architecture</span>
+              <span class="tag">Data models</span>
+              <span class="tag">ER model</span>
+              <span class="tag">Extended ER</span>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-group">
+                <label>Exam type</label>
+                <select>
+                  <option>Sessional Exam</option>
+                  <option>End Semester</option>
+                  <option>Quiz</option>
+                  <option>Practice Test</option>
+                </select>
+              </div>
+              <div class="setting-group">
+                <label>Difficulty</label>
+                <select>
+                  <option>Mixed</option>
+                  <option>Easy</option>
+                  <option>Medium</option>
+                  <option>Hard</option>
+                </select>
+              </div>
+              <div class="setting-group">
+                <label>Total marks</label>
+                <input type="number" value="30" min="10" max="100" />
+              </div>
+              <div class="setting-group">
+                <label>Time duration</label>
+                <select>
+                  <option>1 Hour</option>
+                  <option>1.5 Hours</option>
+                  <option>2 Hours</option>
+                  <option>3 Hours</option>
+                </select>
+              </div>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-ghost" onclick="goStep(2)">
+                <i class="ti ti-arrow-left" aria-hidden="true"></i> Back
+              </button>
+              <button class="btn btn-primary" onclick="goStep(4)">
+                <i class="ti ti-sparkles" aria-hidden="true"></i> Generate Paper
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div id="step4" class="hidden">
+            <div class="step-indicator">Generated Paper</div>
+            <div class="step-title">Generation failed</div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%; background: #ef4444"></div>
+            </div>
+            <div class="result-box error">
+              <p class="error-msg">
+                <i
+                  class="ti ti-alert-circle"
+                  aria-hidden="true"
+                  style="vertical-align: -2px; margin-right: 6px"
+                ></i
+                >Could not connect to generation API. Check your connection and try again.
+              </p>
+            </div>
+            <div class="btn-row" style="margin-top: 1.25rem">
+              <button class="btn btn-ghost" onclick="goStep(1)">New Paper</button>
+              <button class="btn btn-primary">
+                <i class="ti ti-download" aria-hidden="true"></i> Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/generate-paper.js"></script>
+  </body>
+</html>
