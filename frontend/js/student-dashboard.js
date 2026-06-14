@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeSidebar();
     initializeQuickActions();
     initializeProfile();
+    document.getElementById("subjectsCount").textContent = 6;
+    document.getElementById("notesCount").textContent = 24;
+    document.getElementById("pyqsCount").textContent = 15;
+    document.getElementById("papersCount").textContent = 8;
 
 });
 
@@ -110,19 +114,31 @@ function initializeQuickActions() {
             switch (text) {
 
                 case "Generate New Paper":
-                    alert("Generate Paper Feature Coming Soon");
+                    showSection(
+                        "paperSection",
+                        document.querySelectorAll(".sidebar a")[1]
+                        );
                     break;
 
                 case "Evaluate Answer Sheet":
-                    alert("Answer Evaluation Feature Coming Soon");
+                    showSection(
+                        "evaluationSection",
+                        document.querySelectorAll(".sidebar a")[2]
+                    );
                     break;
 
                 case "View Notes":
-                    alert("Notes Section Opening");
+                    showSection(
+                        "notesSection",
+                        document.querySelectorAll(".sidebar a")[5]
+                    );
                     break;
 
                 case "View PYQs":
-                    alert("PYQ Section Opening");
+                    showSection(
+                        "pyqSection",
+                        document.querySelectorAll(".sidebar a")[6]
+                    );
                     break;
             }
 
@@ -145,26 +161,36 @@ function initializeProfile() {
 
     profile.style.cursor = "pointer";
 
-    profile.addEventListener("click", () => {
+   profile.addEventListener("click", () => {
 
-        alert(
-`Student Profile
+    const modal =
+    document.getElementById("profileModal");
 
-Name: Yash
-Year: 3rd Year
+    modal.classList.toggle("show");
 
-Email:
-yash@example.com
-
-Branch:
-Computer Science`
-        );
-
-    });
-
+});
 }
 
+function showSection(sectionId, element) {
 
+    document
+        .querySelectorAll(".content-section")
+        .forEach(section => {
+            section.classList.add("hidden");
+        });
+
+    document
+        .getElementById(sectionId)
+        .classList.remove("hidden");
+
+    document
+        .querySelectorAll(".sidebar li")
+        .forEach(item => {
+            item.classList.remove("active");
+        });
+
+    element.parentElement.classList.add("active");
+}
 /* =====================================
    SIMPLE MESSAGE
 ===================================== */
@@ -260,6 +286,7 @@ async function evaluateAnswerSheet() {
     */
 
 }
+
 
 
 /* =====================================
