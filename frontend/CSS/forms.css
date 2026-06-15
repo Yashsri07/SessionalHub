@@ -20,12 +20,35 @@
     justify-content: center;
     background: linear-gradient(
         135deg,
-        #2563eb,
-        #1d4ed8
+        #2563eb 0%,
+        #1d4ed8 50%,
+        #0f172a 100%
     );
     color: #ffffff;
+     position: relative;
+    overflow: hidden;
+}
+.auth-banner::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    top: -120px;
+    right: -120px;
+    filter: blur(20px);
+    animation: floatBlob 8s ease-in-out infinite;
 }
 
+@keyframes floatBlob {
+    0%,100%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(-30px,25px);
+    }
+}
 .auth-banner-content {
     max-width: 520px;
 }
@@ -38,6 +61,11 @@
     background: rgba(255,255,255,0.14);
     font-size: 14px;
     font-weight: 700;
+     transition: all .3s ease;
+}
+.auth-tag:hover{
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.22);
 }
 
 .auth-banner h1 {
@@ -51,6 +79,45 @@
     color: rgba(255,255,255,0.9);
     line-height: 1.8;
     font-size: 17px;
+}
+.feature-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:24px 0;
+}
+.feature-pills span{
+    background: rgba(255,255,255,0.15);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    animation: floatPill 4s ease-in-out infinite;
+}
+.feature-pills span:nth-child(2){
+    animation-delay: 0.5s;
+}
+
+.feature-pills span:nth-child(3){
+    animation-delay: 1s;
+}
+
+@keyframes floatPill{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-6px);
+    }
+}
+.auth-banner h1{
+    transition:0.3s ease;
+}
+
+.auth-banner h1:hover{
+    transform:scale(1.03);
 }
 
 .outline-btn {
@@ -90,6 +157,11 @@
     background: #ffffff;
     box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
     animation: cardReveal 0.6s ease;
+    transition: all 0.3s ease;
+}
+.auth-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 .auth-header {
