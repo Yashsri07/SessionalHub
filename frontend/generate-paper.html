@@ -26,7 +26,7 @@
             <div class="step-indicator">Step 1 of 3</div>
             <div class="step-title">Select a subject</div>
             <div class="progress-bar"><div class="progress-fill" style="width: 33%"></div></div>
-            <div class="subject-grid">
+            <div class="subject-grid" id="subjectGrid">
               <div class="subject-card selected" data-s="DBMS">
                 <div class="subj-name">DBMS</div>
                 <div class="subj-meta">CS401 · 4 units</div>
@@ -65,6 +65,7 @@
             <div class="step-title">
               Select units / topics — <span id="subjectLabel">DBMS</span>
             </div>
+            <div id="unitContainer"></div>
             <div class="progress-bar"><div class="progress-fill" style="width: 66%"></div></div>
             <div class="unit-block">
               <div class="unit-header">
@@ -154,9 +155,10 @@
             <div class="step-indicator">Step 3 of 3</div>
             <div class="step-title">Paper settings</div>
             <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
-            <div style="font-size: 13px; font-weight: 500; color: #6b7280; margin-bottom: 6px">
-              DBMS · 5 topics selected
-            </div>
+            <div
+              id="selectedSummary"
+              style="font-size: 13px; font-weight: 500; color: #6b7280; margin-bottom: 6px"
+            ></div>
             <div class="tags-row">
               <span class="tag">Database concepts</span>
               <span class="tag">DBMS architecture</span>
@@ -176,7 +178,7 @@
               </div>
               <div class="setting-group">
                 <label>Difficulty</label>
-                <select>
+                <select id="difficulty">
                   <option>Mixed</option>
                   <option>Easy</option>
                   <option>Medium</option>
@@ -185,7 +187,7 @@
               </div>
               <div class="setting-group">
                 <label>Total marks</label>
-                <input type="number" value="30" min="10" max="100" />
+                <input id="marks" type="number" value="30" min="10" max="100" />
               </div>
               <div class="setting-group">
                 <label>Time duration</label>
@@ -201,7 +203,8 @@
               <button class="btn btn-ghost" onclick="goStep(2)">
                 <i class="ti ti-arrow-left" aria-hidden="true"></i> Back
               </button>
-              <button class="btn btn-primary" onclick="goStep(4)">
+
+              <button class="btn btn-primary" onclick="generatePaper()">
                 <i class="ti ti-sparkles" aria-hidden="true"></i> Generate Paper
               </button>
             </div>
@@ -210,11 +213,21 @@
           <!-- Step 4 -->
           <div id="step4" class="hidden">
             <div class="step-indicator">Generated Paper</div>
+            <div class="step-title">Sessional Question Paper</div>
+
+            <div class="result-box">
+              <pre id="generatedPaper">
+
+Loading...
+
+        </pre
+              >
+            </div>
             <div class="step-title">Generation failed</div>
             <div class="progress-bar">
               <div class="progress-fill" style="width: 100%; background: #ef4444"></div>
             </div>
-            <div class="result-box error">
+            <!-- <div class="result-box error">
               <p class="error-msg">
                 <i
                   class="ti ti-alert-circle"
@@ -223,9 +236,14 @@
                 ></i
                 >Could not connect to generation API. Check your connection and try again.
               </p>
-            </div>
+            </div> -->
             <div class="btn-row" style="margin-top: 1.25rem">
               <button class="btn btn-ghost" onclick="goStep(1)">New Paper</button>
+              <!-- <button
+            class="btn btn-primary"
+            onclick="downloadPaper()">
+            Download PDF
+        </button> -->
               <button class="btn btn-primary">
                 <i class="ti ti-download" aria-hidden="true"></i> Download
               </button>

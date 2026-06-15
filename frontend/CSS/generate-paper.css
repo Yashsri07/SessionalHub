@@ -266,3 +266,15 @@
   .hidden {
     display: none;
   }
+
+  pre {
+
+    white-space: pre-wrap;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+}
