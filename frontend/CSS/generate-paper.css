@@ -90,11 +90,13 @@
     border-radius: var(--border-radius-md);
     padding: 14px 16px;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all 0.3s ease;
   }
-  .subject-card:hover {
+ .subject-card:hover {
+    transform: translateY(-6px) scale(1.02);
     border-color: #2563eb;
-  }
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+}
   .subject-card.selected {
     background: #eff6ff;
     border: 1.5px solid #2563eb;
@@ -105,10 +107,25 @@
     color: #111827;
     margin-bottom: 3px;
   }
+  .subject-card:hover .subj-name {
+    color: #2563eb;
+}
   .subject-card .subj-meta {
     font-size: 12px;
     color: #6b7280;
   }
+.subject-card.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background: #f3f4f6;
+    pointer-events: none;
+}
+
+.subject-card.disabled:hover {
+    border-color: #dde1e7;
+    transform: none;
+    box-shadow: none;
+}
   .unit-block {
     margin-bottom: 8px;
   }
