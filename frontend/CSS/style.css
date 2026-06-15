@@ -127,7 +127,17 @@ a {
     align-items: center;
     gap: 44px;
 }
+.hero-title {
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
 
+.hero-title:hover {
+    color: #2563eb;
+    transform: translateY(-4px) scale(1.05);
+    text-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
 .hero-content {
     max-width: 760px;
     animation: mainPageReveal 0.9s ease-out 2s both;
@@ -186,6 +196,13 @@ h1 {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     animation: none;
+     transition: all 0.3s ease;
+    cursor: pointer;
+}
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #2563eb;
 }
 
 .stat-card:nth-child(1) {
@@ -227,8 +244,24 @@ h1 {
     background: #ffffff;
     border: 1px solid #dbe4ef;
     animation: mainPageReveal 0.9s ease-out 2.25s both;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
-
+.info-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #2563eb;
+}
+.stat-card:hover,
+.info-block:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2);
+    border-color: #2563eb;
+}
+.stat-card:hover .stat-number,
+.info-block:hover h2 {
+    color: #2563eb;
+}
 .info-block:nth-child(1) {
     animation-delay: 2.25s;
 }
