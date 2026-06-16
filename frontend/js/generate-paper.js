@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let selectedSubject = 'DBMS';
 
 document.querySelectorAll('.subject-card').forEach((card) => {
@@ -16,6 +17,8 @@ document.querySelectorAll('.subject-card').forEach((card) => {
     selectedSubject = card.dataset.s;
   });
 });
+=======
+>>>>>>> 1b6297f (Paper generation frontend updates)
 
 let selectedSubject = '';
 
@@ -27,6 +30,7 @@ let selectedUnits = [];
 //     selectedSubject = card.dataset.s;
 //   });
 // });
+
 function toggleTopics(id, show) {
   document.getElementById(id).classList.toggle('hidden', !show);
 }
@@ -38,15 +42,27 @@ function goStep(n) {
 
   document.getElementById('step' + n).classList.remove('hidden');
 
+<<<<<<< HEAD
   if (n === 2) {
     document.getElementById('subjectLabel').textContent = selectedSubject;
   }
 }
   if (n === 2) document.getElementById('subjectLabel').textContent = selectedSubject;
+=======
+
+  if (n === 2) {
+    document.getElementById('subjectLabel').textContent = selectedSubject;
+  }
+
+>>>>>>> 1b6297f (Paper generation frontend updates)
   if (n === 3) {
     console.log('Selected Subject:', selectedSubject);
     document.getElementById('selectedSummary').textContent = selectedSubject + ' · Topics Selected';
   }
+
+
+  
+  
 
 
 async function loadSubjects() {
@@ -73,7 +89,7 @@ async function loadSubjects() {
       selectedSubject = subject;
 
       console.log(selectedSubject);
-        await loadUnits(subject);
+      await loadUnits(subject);
     });
 
     grid.appendChild(card);
@@ -133,3 +149,4 @@ function downloadPaper() {
 window.onload = () => {
   loadSubjects();
 };
+
