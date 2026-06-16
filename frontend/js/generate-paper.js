@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let selectedSubject = 'DBMS';
 
 document.querySelectorAll('.subject-card').forEach((card) => {
@@ -17,8 +16,6 @@ document.querySelectorAll('.subject-card').forEach((card) => {
     selectedSubject = card.dataset.s;
   });
 });
-=======
->>>>>>> 1b6297f (Paper generation frontend updates)
 
 let selectedSubject = '';
 
@@ -42,19 +39,16 @@ function goStep(n) {
 
   document.getElementById('step' + n).classList.remove('hidden');
 
-<<<<<<< HEAD
   if (n === 2) {
     document.getElementById('subjectLabel').textContent = selectedSubject;
   }
 }
   if (n === 2) document.getElementById('subjectLabel').textContent = selectedSubject;
-=======
 
   if (n === 2) {
     document.getElementById('subjectLabel').textContent = selectedSubject;
   }
 
->>>>>>> 1b6297f (Paper generation frontend updates)
   if (n === 3) {
     console.log('Selected Subject:', selectedSubject);
     document.getElementById('selectedSummary').textContent = selectedSubject + ' · Topics Selected';
