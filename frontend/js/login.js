@@ -67,6 +67,8 @@ loginForm.addEventListener('submit', async (event) => {
 
       localStorage.setItem('user_role', data.role);
 
+      localStorage.setItem('user', JSON.stringify(data.user));
+
       // Redirect by role
       setTimeout(() => {
         if (data.role === 'student') {
