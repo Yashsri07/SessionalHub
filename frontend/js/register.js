@@ -2,7 +2,7 @@
 // API BASE URL
 // ================================
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = 'http://127.0.0.1:3000';
 
 // ================================
 // ELEMENTS
@@ -110,7 +110,7 @@ registerForm.addEventListener('submit', async (event) => {
 
   // Register API
   try {
-    const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
+    const response = await fetch(`${API_BASE_URL}api/auth/register`, {
       method: 'POST',
 
       headers: {
@@ -139,7 +139,7 @@ registerForm.addEventListener('submit', async (event) => {
         window.location.href = 'login.html';
       }, 1500);
     } else {
-      formMessage.textContent = data.detail || 'Registration failed';
+      formMessage.textContent = data.detail || data.message || 'Registration failed';
 
       formMessage.className = 'form-message field-error';
     }

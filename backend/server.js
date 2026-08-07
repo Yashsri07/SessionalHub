@@ -3,6 +3,7 @@ import cors from 'cors';
 
 import db from './config/dbConnection.js';
 import authRoutes from './routes/authRoutes.js';
+import paperRoutes from './routes/paperRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -27,27 +28,22 @@ db.run(`
 `);
 
 app.use('/api/auth', authRoutes);
+app.use('/api/paper', paperRoutes);
 
-// ==========================
 // PROTECTED ROUTE
-// ==========================
 
 // app.get(
-//     "/api/protected/dashboard",
+//   '/api/protected/dashboard',
 
-//     authenticateToken,
+//   authenticateToken,
 
-//     (req, res) => {
+//   (req, res) => {
+//     res.json({
+//       message: 'Protected dashboard accessed',
 
-//         res.json({
-
-//             message: "Protected dashboard accessed",
-
-//             loggedInUser: req.user
-
-//         });
-
-//     }
+//       loggedInUser: req.user,
+//     });
+//   },
 // );
 
 app.get('/', (req, res) => {
@@ -60,6 +56,6 @@ app.get('/users', (req, res) => {
   });
 });
 
-app.listen(8000, () => {
-  console.log('server listen on port http://127.0.0.1:8000');
+app.listen(3000, () => {
+  console.log('server listen on port http://127.0.0.1:3000');
 });

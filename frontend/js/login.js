@@ -2,7 +2,7 @@
 // API BASE URL
 // ================================
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = 'http://127.0.0.1:3000';
 
 // ================================
 // ELEMENTS
@@ -66,6 +66,8 @@ loginForm.addEventListener('submit', async (event) => {
       localStorage.setItem('access_token', data.access_token);
 
       localStorage.setItem('user_role', data.role);
+
+      localStorage.setItem('user', JSON.stringify(data.user));
 
       // Redirect by role
       setTimeout(() => {
