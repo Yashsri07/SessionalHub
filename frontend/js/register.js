@@ -2,7 +2,7 @@
 // API BASE URL
 // ================================
 
-const API_BASE_URL = 'http://127.0.0.1:3000';
+const API_BASE_URL = 'http://127.0.0.1:8000';
 
 // ================================
 // ELEMENTS
@@ -36,7 +36,7 @@ usernameInput.addEventListener('input', async () => {
   usernameMessage.classList.add('field-info');
 
   try {
-    const response = await fetch(`${API_BASE_URL}/api/auth/check-username/${username}`);
+    const response = await fetch(`${API_BASE_URL}/check-username/${username}`);
 
     const data = await response.json();
 
@@ -110,14 +110,14 @@ registerForm.addEventListener('submit', async (event) => {
 
   // Register API
   try {
-    const response = await fetch(`${API_BASE_URL}api/auth/register`, {
+    const response = await fetch(`${API_BASE_URL}/register`, {
       method: 'POST',
 
       headers: {
         'Content-Type': 'application/json',
       },
 
-      body: JSON.stringify({
+      body: JSONs.stringify({
         full_name: fullName,
         username: username,
         role: role,

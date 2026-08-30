@@ -8,7 +8,7 @@ from app.models.paper_request import PaperRequest #added
 # router = APIRouter()
 
 
-router = APIRouter(prefix="/api/paper")
+router = APIRouter()
 
 @router.get("/subjects") #added
 def get_subjects():
