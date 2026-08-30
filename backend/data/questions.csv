@@ -1,0 +1,74 @@
+question_id,subject_name,unit_number,topic_name,question_text,difficulty_level,requires_diagram,marks
+1,Operating Systems,1,Introduction to Operating System,"Define Operating System and explain its major functions.",Medium,No,3
+2,Operating Systems,1,Real Time Operating System,"Briefly explain the concept of Real Time Operating System.",Medium,No,1
+3,Operating Systems,1,Multiuser and Multithreading Systems,"Discuss Multiuser Systems and Multithreaded Systems in detail.",Medium,No,3
+4,Operating Systems,1,OS Services,"Explain various services provided by an Operating System.",Medium,No,3
+5,Operating Systems,1,Kernel Architecture,"Differentiate between Monolithic Kernel and Microkernel Architecture.",Medium,No,3
+6,Operating Systems,1,Functions of Operating System,"State and explain the two primary functions of an Operating System.",Medium,No,1
+7,Operating Systems,1,Multiprogramming,"Discuss the advantages of Multiprogramming.",Medium,No,1
+8,Operating Systems,1,Types of Operating Systems,"Explain Multiprocessor OS, Real-Time OS, and Time-Sharing OS.",Medium,No,3
+9,Operating Systems,1,Objectives of Operating System,"Describe the main objective of an Operating System.",Medium,No,1
+10,Operating Systems,1,Batch Processing System,"What is Batch Processing System? Explain briefly.",Medium,No,1
+11,Operating Systems,1,Resident Monitor,"Define Resident Monitor and explain its role.",Medium,No,1
+12,Operating Systems,1,Time Sharing and Multiprogramming,"Differentiate between Time-Sharing and Multiprogramming Operating Systems.",Medium,No,3
+13,Operating Systems,1,Data Structures Concept,"Explain polynomial representation using linked list.",Medium,No,3
+14,Operating Systems,1,Array Address Calculation,"Calculate address of A[10][20][30] in 3D array.",Medium,No,3
+15,Operating Systems,1,Array Address Calculation,"Find address of ARR[10][15] in row major order.",Medium,No,3
+16,Operating Systems,1,Algorithm Analysis,"Explain asymptotic notations used in algorithm analysis.",Medium,No,1
+17,Operating Systems,1,Data Structure Comparison,"Compare Array and Linked List.",Medium,No,1
+18,Operating Systems,1,Algorithm Design Concept,"Explain Time-Space Trade-off.",Medium,No,1
+19,Operating Systems,2,Stack and Expression Evaluation,"Algorithm for infix to postfix conversion.",Medium,No,3
+20,Operating Systems,2,Stack Implementation,"C program for stack using linked list.",Medium,No,3
+21,Operating Systems,2,Circular Queue,"Explain circular queue and insertion code.",Medium,No,3
+22,Operating Systems,2,Recursion,"Explain tail recursion with example.",Medium,No,1
+23,Operating Systems,2,Circular Queue Conditions,"Write full and empty conditions of circular queue.",Medium,No,1
+24,Operating Systems,2,Concurrent Processes,"What are concurrent processes?",Medium,No,1
+25,Operating Systems,2,Critical Section Problem,"Explain mutual exclusion and critical section problem.",Medium,Yes,3
+26,Operating Systems,2,Dining Philosopher Problem,"Explain dining philosopher problem.",Medium,Yes,3
+27,Operating Systems,2,Inter Process Communication,"Explain IPC models.",Medium,No,3
+28,Operating Systems,2,Semaphores,"Define semaphore and its types.",Medium,No,1
+29,Operating Systems,2,Producer Consumer Problem,"Explain producer consumer problem.",Medium,Yes,3
+30,Operating Systems,2,Concurrency Principle,"Define concurrency principle.",Medium,No,1
+31,Operating Systems,3,Hashing,"Explain hashing and collision resolution.",Medium,No,3
+32,Operating Systems,3,Quick Sort Algorithm,"Write quick sort algorithm.",Medium,No,3
+33,Operating Systems,3,Merge Sort Algorithm,"Write merge sort algorithm.",Medium,No,3
+34,Operating Systems,3,CPU Scheduling,"Why CPU scheduling is needed?",Medium,No,1
+35,Operating Systems,3,Scheduling Performance Criteria,"Explain scheduling performance criteria.",Medium,No,1
+36,Operating Systems,3,Process Control Block,"Explain Process Control Block.",Medium,No,3
+37,Operating Systems,3,Priority Scheduling,"Draw Gantt chart for priority scheduling.",Medium,Yes,3
+38,Operating Systems,3,Process States,"Explain process state transition diagram.",Medium,Yes,3
+39,Operating Systems,3,Process State,"Define process state.",Medium,No,1
+40,Operating Systems,3,Starvation Problem,"Explain starvation problem.",Medium,No,1
+41,Operating Systems,4,Disk Access Time,"Define seek time and latency.",Medium,No,1
+42,Operating Systems,4,Logical and Physical Address Space,"Explain logical and physical address space.",Medium,Yes,3
+43,Operating Systems,4,Fixed Partition Multiprogramming,"Explain multiprogramming with fixed partitions.",Medium,Yes,3
+44,Operating Systems,4,Disk Scheduling,"Explain disk scheduling.",Medium,Yes,3
+45,Operating Systems,4,File Concept,"Explain file concept.",Medium,No,1
+46,Operating Systems,4,Disk Scheduling Algorithms,"Calculate disk head movement.",Medium,Yes,3
+47,Operating Systems,4,Page Replacement Algorithms,"Illustrate FIFO and Optimal page replacement.",Medium,Yes,3
+48,Operating Systems,4,Thrashing and Locality,"Explain thrashing and locality.",Medium,No,1
+49,Operating Systems,4,Address Space,"Distinguish logical and physical address space.",Medium,No,1
+50,Operating Systems,4,File Operations,"Explain file operations.",Medium,No,1
+51,Operating Systems,4,Paging,"Explain paging with TLB.",Medium,Yes,3
+52,Operating Systems,4,RAID,"Explain RAID.",Medium,Yes,3
+53,Operating Systems,4,Demand Paging,"Explain demand paging.",Medium,Yes,3
+54,Operating Systems,4,Disk Scheduling Algorithms,"Calculate head movement using algorithms.",Medium,Yes,3
+55,Operating Systems,4,Memory Partitioning,"Compare fixed and variable partitions.",Medium,No,3
+56,Operating Systems,4,Paging vs Segmentation,"Explain paging vs segmentation.",Medium,Yes,3
+57,Operating Systems,4,Virtual Memory,"Explain virtual memory.",Medium,Yes,3
+58,Operating Systems,4,File Allocation Methods,"Explain file allocation methods.",Medium,Yes,3
+59,Operating Systems,4,Directory Structure,"Explain directory structure.",Medium,Yes,3
+60,Operating Systems,4,AVL Tree,"Construct AVL Tree.",Medium,Yes,3
+61,Operating Systems,4,B Tree,"Explain B Tree.",Medium,Yes,3
+62,Operating Systems,4,Binary Search Tree,"Construct BST and inorder traversal.",Medium,Yes,3
+63,Operating Systems,5,Safe and Unsafe State,"Define safe and unsafe state.",Medium,No,1
+64,Operating Systems,5,IO Buffering,"Define I/O buffering.",Medium,No,1
+65,Operating Systems,5,File System Protection,"Explain file system protection.",Medium,No,3
+66,Operating Systems,5,Deadlock System Model,"Explain deadlock system model.",Medium,Yes,3
+67,Operating Systems,5,Bankers Algorithm,"Apply banker’s algorithm.",Medium,Yes,3
+68,Operating Systems,5,Deadlock Conditions,"Explain deadlock conditions.",Medium,Yes,3
+69,Operating Systems,5,Deadlock Prevention and Avoidance,"Explain deadlock prevention techniques.",Medium,No,3
+70,Operating Systems,5,Dijkstra Algorithm,"Write Dijkstra algorithm.",Medium,No,3
+71,Operating Systems,5,Prim Algorithm,"Write Prim’s algorithm.",Medium,Yes,3
+72,Operating Systems,5,Breadth First Search,"Write BFS traversal.",Medium,Yes,3
+73,Operating Systems,5,Floyd Warshall Algorithm,"Explain Floyd Warshall algorithm.",Medium,No,3

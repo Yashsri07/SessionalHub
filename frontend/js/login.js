@@ -2,7 +2,7 @@
 // API BASE URL
 // ================================
 
-const API_BASE_URL = 'http://127.0.0.1:3000';
+const API_BASE_URL = 'http://127.0.0.1:8000';
 
 // ================================
 // ELEMENTS
@@ -40,7 +40,7 @@ loginForm.addEventListener('submit', async (event) => {
 
   // Login API
   try {
-    const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
+    const response = await fetch(`${API_BASE_URL}/login`, {
       method: 'POST',
 
       headers: {

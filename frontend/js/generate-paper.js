@@ -63,7 +63,7 @@ async function loadSubjects() {
 
   // const data = await response.json();
 
-  const response = await fetch('/api/paper/subjects');
+  const response = await fetch('/subjects');
   const data = await response.json();
 
   console.log(data);
@@ -117,7 +117,7 @@ async function loadSubjects() {
 }
 
 async function loadUnits(subject) {
-  const response = await fetch(`http://127.0.0.1:8000/api/paper/units/${subject}`);
+  const response = await fetch(`/units/${encodeURIComponent(subject)}`);
 
   const data = await response.json();
 
@@ -224,7 +224,7 @@ async function generatePaper() {
 
   console.log(payload);
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/paper/generate-paper', {
+    const response = await fetch('/generate-paper', {
       method: 'POST',
 
       headers: {
@@ -252,7 +252,7 @@ async function generatePaper() {
 }
 
 function downloadPaper() {
-  window.open('http://127.0.0.1:8000/download-paper');
+  window.open('/download-paper');
 }
 
 window.onload = () => {

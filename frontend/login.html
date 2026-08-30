@@ -1,130 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-
+  <head>
     <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title -->
     <title>Login | SessionalHub</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/forms.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <main class="auth-page">
+      <!-- Left Branding -->
+      <section class="auth-banner">
+        <div class="auth-banner-content">
+          <span class="auth-tag"> Welcome Back </span>
 
-        <!-- Left Branding -->
-        <section class="auth-banner">
+          <h1>SessionalHub</h1>
 
-            <div class="auth-banner-content">
+          <p class="auth-description">
+            Login to access dashboards, evaluations, AI tools, performance analytics, and academic
+            resources.
+          </p>
+          <div class="feature-pills">
+            <span>🤖 AI Evaluation</span>
+            <span>📄 Paper Generation</span>
+            <span>📊 Analytics</span>
+          </div>
 
-                <span class="auth-tag">
-                    Welcome Back
-                </span>
+          <a href="index.html" class="outline-btn"> Back To Home </a>
+        </div>
+      </section>
 
-                <h1>SessionalHub</h1>
+      <!-- Login Form -->
+      <section class="auth-section">
+        <div class="auth-card">
+          <!-- Header -->
+          <div class="auth-header">
+            <h2>Login</h2>
 
-                <p class="auth-description">
-                    Login to access dashboards, evaluations,
-                    AI tools, performance analytics, and academic resources.
-                </p>
-                  <div class="feature-pills">
-                    <span>🤖 AI Evaluation</span>
-                    <span>📄 Paper Generation</span>
-                    <span>📊 Analytics</span>
-                </div>
+            <p>Continue to your dashboard</p>
+          </div>
 
-                <a href="index.html" class="outline-btn">
-                    Back To Home
-                </a>
+          <!-- Form -->
+          <form id="loginForm">
+            <!-- Username -->
+            <div class="form-group">
+              <label>Username or Gmail</label>
 
+              <input
+                type="text"
+                id="loginIdentifier"
+                class="form-input"
+                placeholder="Enter username or Gmail"
+              />
             </div>
 
-        </section>
+            <!-- Role -->
+            <div class="form-group">
+              <label>Login As</label>
 
-        <!-- Login Form -->
-        <section class="auth-section">
-
-            <div class="auth-card">
-
-                <!-- Header -->
-                <div class="auth-header">
-                    <h2>Login</h2>
-
-                    <p>
-                        Continue to your dashboard
-                    </p>
-                </div>
-
-                <!-- Form -->
-                <form id="loginForm">
-
-                    <!-- Username -->
-                    <div class="form-group">
-                        <label>Username or Gmail</label>
-
-                        <input
-                            type="text"
-                            id="loginIdentifier"
-                            class="form-input"
-                            placeholder="Enter username or Gmail"
-                        >
-                    </div>
-
-                    <!-- Role -->
-                    <div class="form-group">
-                        <label>Login As</label>
-
-                        <select id="loginRole" class="form-input">
-                            <option value="">Select role</option>
-                            <option value="student">Student</option>
-                            <option value="teacher">Teacher</option>
-                            <option value="Admin">Admin</option>
-                        </select>
-                    </div>
-
-                    <!-- Password -->
-                    <div class="form-group">
-                        <label>Password</label>
-
-                        <input
-                            type="password"
-                            id="loginPassword"
-                            class="form-input"
-                            placeholder="Enter password"
-                        >
-                    </div>
-
-                    <!-- Button -->
-                    <button type="submit" class="auth-btn">
-                        Login
-                    </button>
-
-                    <!-- Message -->
-                    <p id="loginMessage" class="form-message"></p>
-
-                </form>
-
-                <!-- Footer -->
-                <div class="auth-footer">
-                    Don't have an account?
-                    <a href="register.html">Register</a>
-                </div>
-
+              <select id="loginRole" class="form-input">
+                <option value="">Select role</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="Admin">Admin</option>
+              </select>
             </div>
 
-        </section>
+            <!-- Password -->
+            <div class="form-group">
+              <label>Password</label>
 
+              <input
+                type="password"
+                id="loginPassword"
+                class="form-input"
+                placeholder="Enter password"
+              />
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="auth-btn">Login</button>
+
+            <!-- Message -->
+            <p id="loginMessage" class="form-message"></p>
+          </form>
+
+          <!-- Footer -->
+          <div class="auth-footer">
+            Don't have an account?
+            <a href="register.html">Register</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- JS -->
-    <script src="js/login.js"></script>
-
-</body>
+    <script src="/static/js/login.js"></script>
+  </body>
 </html>
