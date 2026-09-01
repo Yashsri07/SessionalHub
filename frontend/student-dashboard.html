@@ -30,7 +30,9 @@
           </li>
 
           <li>
-            <a href="#" onclick="showSection('evaluationSection', this)"> Answer Evaluation </a>
+            <a href="#" onclick="window.location.href = 'evaluate-answer.html'">
+              Answer Evaluation
+            </a>
           </li>
 
           <li>
@@ -74,8 +76,7 @@
           <img src="https://ui-avatars.com/api/?name=Student" alt="Profile" />
 
           <div>
-            <h4>User</h4>
-
+            <h4 id="profileUsername">Loading...</h4>
             <span>3rd Year Student</span>
           </div>
         </div>
@@ -185,9 +186,9 @@
     <!-- PROFILE MODAL -->
 
     <div id="profileModal" class="profile-modal">
-      <h3>Yash</h3>
+      <h3 id="modalUsername">Loading...</h3>
 
-      <p>Year 3 Student</p>
+      <p id="modalRole">Student</p>
 
       <hr />
 
@@ -195,7 +196,6 @@
 
       <button class="modal-btn">Edit Profile</button>
     </div>
-
     <script src="/static/js/student-dashboard.js"></script>
   </body>
 </html>

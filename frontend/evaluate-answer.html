@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SessionalHub</title>
+    <link rel="stylesheet" href="/static/css/evaluate-answer.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <h1>SessionalHub</h1>
+        <p class="lede">
+          Upload a question paper and handwritten answer sheets. AI derives a rubric and creates
+          provisional question-wise marksheets.
+        </p>
+      </header>
+      <section class="card" id="exam-card">
+        <div class="step">1</div>
+        <div class="content">
+          <h2>Upload Qestion Paper</h2>
+          <form id="exam-form">
+            <label
+              >Subject Name: <input name="title" placeholder="e.g. Biology Midterm" required
+            /></label>
+            <label
+              >Total marks
+              <input name="total_marks" type="number" min="1" step="0.5" value="20" required
+            /></label>
+            <label class="wide"
+              >Question paper (PDF)
+              <input name="question_paper" type="file" accept="application/pdf" required
+            /></label>
+            <button type="submit">upload</button>
+          </form>
+          <p class="status" id="exam-status">Upload the question paper to begin.</p>
+        </div>
+      </section>
+
+      <section class="card disabled" id="sheets-card">
+        <div class="step">2</div>
+        <div class="content">
+          <h2>Upload answer sheets</h2>
+          <form id="sheets-form">
+            <label class="wide"
+              >Student answer-sheet PDFs
+              <input name="sheets" type="file" accept="application/pdf" multiple required
+            /></label>
+            <button type="submit">Upload sheets</button>
+          </form>
+          <p class="status" id="sheets-status">Waiting for an exam.</p>
+        </div>
+      </section>
+
+      <section class="card disabled" id="prepare-card">
+        <div class="step">3</div>
+        <div class="content">
+          <h2>Ready to extract answersheet</h2>
+          <button id="prepare-button" type="button">Extract Answers</button>
+          <p class="status" id="prepare-status">Waiting for answer sheets.</p>
+          <div id="rubric" class="rubric"></div>
+        </div>
+      </section>
+
+      <section class="card disabled" id="grade-card">
+        <div class="step">4</div>
+        <div class="content">
+          <h2>generate marksheets</h2>
+          <p>Processing is local and may take several minutes for handwritten PDFs.</p>
+          <button id="grade-button" type="button">Grade all sheets</button>
+          <p class="status" id="grade-status">Prepare the rubric first.</p>
+        </div>
+      </section>
+
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+    <script src="/static/js/evaluate-answer.js"></script>
+  </body>
+</html>

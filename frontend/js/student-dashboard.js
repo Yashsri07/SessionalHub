@@ -18,214 +18,179 @@
    PAGE LOADED
 ===================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Student Dashboard Loaded');
 
-    console.log("Student Dashboard Loaded");
-
-    initializeSidebar();
-    initializeQuickActions();
-    initializeProfile();
-    document.getElementById("subjectsCount").textContent = 6;
-    document.getElementById("notesCount").textContent = 24;
-    document.getElementById("pyqsCount").textContent = 15;
-    document.getElementById("papersCount").textContent = 8;
-
+  initializeSidebar();
+  initializeQuickActions();
+  initializeProfile();
+  loadProfile();
+  document.getElementById('subjectsCount').textContent = 6;
+  document.getElementById('notesCount').textContent = 24;
+  document.getElementById('pyqsCount').textContent = 15;
+  document.getElementById('papersCount').textContent = 8;
 });
-
 
 /* =====================================
    SIDEBAR NAVIGATION
 ===================================== */
 
 function initializeSidebar() {
+  const menuLinks = document.querySelectorAll('.sidebar li');
 
-    const menuLinks = document.querySelectorAll(".sidebar li");
+  menuLinks.forEach((item) => {
+    item.addEventListener('click', () => {
+      // Remove active class from all
+      menuLinks.forEach((link) => {
+        link.classList.remove('active');
+      });
 
-    menuLinks.forEach(item => {
+      // Add active class
+      item.classList.add('active');
 
-        item.addEventListener("click", () => {
+      const text = item.innerText.trim();
 
-            // Remove active class from all
-            menuLinks.forEach(link => {
-                link.classList.remove("active");
-            });
+      switch (text) {
+        case 'Dashboard':
+          showMessage('Dashboard Opened');
+          break;
 
-            // Add active class
-            item.classList.add("active");
+        case 'Generate Paper':
+          showMessage('Generate Paper Module');
+          break;
 
-            const text = item.innerText.trim();
+        case 'Answer Evaluation':
+          showMessage('Answer Evaluation Module');
+          break;
 
-            switch (text) {
+        case 'Subjects':
+          showMessage('Subjects Module');
+          break;
 
-                case "Dashboard":
-                    showMessage("Dashboard Opened");
-                    break;
+        case 'Syllabus':
+          showMessage('Syllabus Module');
+          break;
 
-                case "Generate Paper":
-                    showMessage("Generate Paper Module");
-                    break;
+        case 'Notes':
+          showMessage('Notes Module');
+          break;
 
-                case "Answer Evaluation":
-                    showMessage("Answer Evaluation Module");
-                    break;
+        case 'PYQs':
+          showMessage('PYQ Module');
+          break;
 
-                case "Subjects":
-                    showMessage("Subjects Module");
-                    break;
-
-                case "Syllabus":
-                    showMessage("Syllabus Module");
-                    break;
-
-                case "Notes":
-                    showMessage("Notes Module");
-                    break;
-
-                case "PYQs":
-                    showMessage("PYQ Module");
-                    break;
-
-                case "Logout":
-                    logout();
-                    break;
-            }
-
-        });
-
+        case 'Logout':
+          logout();
+          break;
+      }
     });
-
+  });
 }
-
 
 /* =====================================
    QUICK ACTION CARDS
 ===================================== */
 
 function initializeQuickActions() {
+  const actionCards = document.querySelectorAll('.action-card');
 
-    const actionCards = document.querySelectorAll(".action-card");
+  actionCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const text = card.innerText.trim();
 
-    actionCards.forEach(card => {
+      switch (text) {
+        case 'Generate New Paper':
+          showSection('paperSection', document.querySelectorAll('.sidebar a')[1]);
+          break;
 
-        card.addEventListener("click", () => {
+        case 'Evaluate Answer Sheet':
+          showSection('evaluationSection', document.querySelectorAll('.sidebar a')[2]);
+          break;
 
-            const text = card.innerText.trim();
+        case 'View Notes':
+          showSection('notesSection', document.querySelectorAll('.sidebar a')[5]);
+          break;
 
-            switch (text) {
-
-                case "Generate New Paper":
-                    showSection(
-                        "paperSection",
-                        document.querySelectorAll(".sidebar a")[1]
-                        );
-                    break;
-
-                case "Evaluate Answer Sheet":
-                    showSection(
-                        "evaluationSection",
-                        document.querySelectorAll(".sidebar a")[2]
-                    );
-                    break;
-
-                case "View Notes":
-                    showSection(
-                        "notesSection",
-                        document.querySelectorAll(".sidebar a")[5]
-                    );
-                    break;
-
-                case "View PYQs":
-                    showSection(
-                        "pyqSection",
-                        document.querySelectorAll(".sidebar a")[6]
-                    );
-                    break;
-            }
-
-        });
-
+        case 'View PYQs':
+          showSection('pyqSection', document.querySelectorAll('.sidebar a')[6]);
+          break;
+      }
     });
-
+  });
 }
-
 
 /* =====================================
    PROFILE CLICK
 ===================================== */
 
 function initializeProfile() {
+  const profile = document.querySelector('.profile');
 
-    const profile = document.querySelector(".profile");
+  if (!profile) return;
 
-    if (!profile) return;
+  profile.style.cursor = 'pointer';
 
-    profile.style.cursor = "pointer";
+  profile.addEventListener('click', () => {
+    const modal = document.getElementById('profileModal');
 
-   profile.addEventListener("click", () => {
-
-    const modal =
-    document.getElementById("profileModal");
-
-    modal.classList.toggle("show");
-
-});
+    modal.classList.toggle('show');
+  });
 }
 
 function showSection(sectionId, element) {
+  document.querySelectorAll('.content-section').forEach((section) => {
+    section.classList.add('hidden');
+  });
 
-    document
-        .querySelectorAll(".content-section")
-        .forEach(section => {
-            section.classList.add("hidden");
-        });
+  document.getElementById(sectionId).classList.remove('hidden');
 
-    document
-        .getElementById(sectionId)
-        .classList.remove("hidden");
+  document.querySelectorAll('.sidebar li').forEach((item) => {
+    item.classList.remove('active');
+  });
 
-    document
-        .querySelectorAll(".sidebar li")
-        .forEach(item => {
-            item.classList.remove("active");
-        });
-
-    element.parentElement.classList.add("active");
+  element.parentElement.classList.add('active');
 }
 /* =====================================
    SIMPLE MESSAGE
 ===================================== */
 
 function showMessage(message) {
-
-    console.log(message);
-
+  console.log(message);
 }
-
 
 /* =====================================
    FUTURE API FUNCTIONS
 ===================================== */
 
 // Student Profile
-async function loadProfile() {
+function loadProfile() {
+  const userData = localStorage.getItem('user');
 
-    /*
-        Example:
+  if (!userData) {
+    console.log('User data not found');
+    return;
+  }
 
-        const response =
-        await fetch("/api/student/profile");
+  try {
+    const user = JSON.parse(userData);
 
-        const data =
-        await response.json();
-    */
+    const username = user.username;
 
+    console.log('Username:', username);
+
+    // Top-right username
+    document.getElementById('profileUsername').textContent = username;
+
+    // Profile modal username
+    document.getElementById('modalUsername').textContent = username;
+  } catch (error) {
+    console.error('Error reading user data:', error);
+  }
 }
-
 
 // Dashboard Stats
 async function loadDashboardStats() {
-
-    /*
+  /*
         Example:
 
         const response =
@@ -234,77 +199,55 @@ async function loadDashboardStats() {
         const data =
         await response.json();
     */
-
 }
-
 
 // Subjects
 async function loadSubjects() {
-
-    /*
+  /*
         GET /api/student/subjects
     */
-
 }
-
 
 // Notes
 async function loadNotes() {
-
-    /*
+  /*
         GET /api/student/notes
     */
-
 }
-
 
 // PYQs
 async function loadPYQs() {
-
-    /*
+  /*
         GET /api/student/pyqs
     */
-
 }
-
 
 // Generate Paper
 async function generatePaper() {
-
-    /*
+  /*
         POST /api/student/generate-paper
     */
-
 }
-
 
 // Answer Evaluation
 async function evaluateAnswerSheet() {
-
-    /*
+  /*
         POST /api/student/evaluate-answer-sheet
     */
-
 }
-
-
 
 /* =====================================
    LOGOUT
 ===================================== */
 
 function logout() {
+  const confirmLogout = confirm('Are you sure you want to logout?');
 
-    const confirmLogout = confirm(
-        "Are you sure you want to logout?"
-    );
+  if (!confirmLogout) return;
 
-    if (!confirmLogout) return;
+  // Future JWT Remove
 
-    // Future JWT Remove
+  // localStorage.removeItem("token");
 
-    // localStorage.removeItem("token");
-
-    window.location.href = "login.html";
-
+  window.location.href = 'login.html';
 }

@@ -117,7 +117,7 @@ registerForm.addEventListener('submit', async (event) => {
         'Content-Type': 'application/json',
       },
 
-      body: JSONs.stringify({
+      body: JSON.stringify({
         full_name: fullName,
         username: username,
         role: role,
@@ -144,7 +144,7 @@ registerForm.addEventListener('submit', async (event) => {
       formMessage.className = 'form-message field-error';
     }
   } catch (error) {
-    formMessage.textContent = 'Server connection failed';
+    formMessage.textContent = error.message || 'Server connection failed';
 
     formMessage.className = 'form-message field-error';
   }

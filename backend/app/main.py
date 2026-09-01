@@ -8,6 +8,7 @@ import os
 
 from app.routes import generate
 from app.routes import auth
+# from app.routes import evaluate
 from app.database import Base
 from app.database import engine
 
@@ -97,8 +98,13 @@ def generate_paper_page():
         FRONTEND_DIR / "generate-paper.html"
     )
 
-
+@app.get("/evaluate-answer.html")
+def generate_paper_page():
+    return FileResponse(
+        FRONTEND_DIR / "evaluate-answer.html"
+    )
 
 app.include_router(generate.router)
 app.include_router(auth.router)
+# app.include_router(evaluate.router)
 

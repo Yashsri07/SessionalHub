@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -38,3 +39,63 @@ HARD_RATIO = 0.2
 # Unit-wise control (future)
 USE_UNIT_DISTRIBUTION = False
 
+# ===============================
+# EVALUATION / OLLAMA CONFIG
+# ===============================
+
+# class Settings:
+
+#     # Ollama
+#     ollama_url = os.getenv(
+#         "OLLAMA_URL",
+#         "http://127.0.0.1:11434"
+#     )
+
+#     ollama_model = os.getenv(
+#         "OLLAMA_MODEL",
+#         "qwen2.5:0.5b"
+#     )
+
+#     ollama_context_length = int(
+#         os.getenv("OLLAMA_CONTEXT_LENGTH", "2048")
+#     )
+
+#     ollama_num_gpu = int(
+#         os.getenv("OLLAMA_NUM_GPU", "0")
+#     )
+
+#     ollama_executable = os.getenv(
+#         "OLLAMA_EXECUTABLE",
+#         ""
+#     )
+
+#         # Tesseract OCR
+#     tesseract_cmd = os.getenv(
+#         "TESSERACT_CMD",
+#         r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#     )
+
+#     # Evaluation storage
+#     data_dir = Path(
+#         os.getenv(
+#             "EVALUATION_DATA_DIR",
+#             "data"
+#         )
+#     )
+
+#     # Upload limit
+#     max_upload_mb = int(
+#         os.getenv(
+#             "MAX_UPLOAD_MB",
+#             "20"
+#         )
+#     )
+
+#     # CORS
+#     allowed_origins = os.getenv(
+#         "ALLOWED_ORIGINS",
+#         "*"
+#     )
+
+
+# settings = Settings()
