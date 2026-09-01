@@ -1,16 +1,25 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse
-from app.services.generator_service import generate_paper
-from app.services.pdf_service import generate_pdf
-from app.services.generator_service import load_data #added
-from app.models.paper_request import PaperRequest #added
 
-# router = APIRouter()
+from sqlalchemy.orm import Session
+
+from app.database import get_db
+
+from app.models.paper import GeneratedPaper
+from app.models.paper_request import PaperRequest
+
+from app.services.generator_service import (
+    generate_paper,
+    load_data
+)
+
+from app.services.pdf_service import generate_pdf
 
 
 router = APIRouter()
 
-@router.get("/subjects") #added
+
+@router.get("/subjects")
 def get_subjects():
 
     df = load_data()
@@ -23,27 +32,28 @@ def get_subjects():
     )
 
     return {
-    "subjects": [
-        {
-            "name": "Operating Systems",
-            "code": "BCS401",
-            "units": 4,
-            "enabled": True
-        },
-        {
-            "name": "DBMS",
-            "code": "BCS402",
-            "units": 5,
-            "enabled": False
-        },
-        {
-            "name": "Computer Networks",
-            "code": "BCS403",
-            "units": 5,
-            "enabled": False
-        }
-    ]
-}
+        "subjects": [
+            {
+                "name": "Operating Systems",
+                "code": "BCS401",
+                "units": 4,
+                "enabled": True
+            },
+            {
+                "name": "DBMS",
+                "code": "BCS402",
+                "units": 5,
+                "enabled": False
+            },
+            {
+                "name": "Computer Networks",
+                "code": "BCS403",
+                "units": 5,
+                "enabled": False
+            }
+        ]
+    }
+
 
 @router.get("/units/{subject}")
 def get_units(subject: str):
@@ -74,6 +84,7 @@ def get_units(subject: str):
         "units": result
     }
 
+
 @router.get("/topics/{subject}")
 def get_topics(subject: str):
 
@@ -93,20 +104,70 @@ def get_topics(subject: str):
     return {
         "topics": topics
     }
-    
-@router.post("/generate-paper")
-def generate(req: PaperRequest):
 
-    return generate_paper(
-        req.subject,
-        req.units,
-        req.topics,
-        req.difficulty,
-        req.marks
+@router.post("/generate-paper")
+def generate(
+    req: PaperRequest,
+    db: Session = Depends(get_db)
+):
+
+    try:
+
+        # Generate paper
+        result = generate_paper(
+            req.subject,
+            req.units,
+            req.topics,
+            req.difficulty,
+            req.marks,
+            db
+        )
+
+        return {
+            "status": "success",
+            "paper_id": result["paper_id"],
+            "paper": result["paper"]
+        }
+
+    except ValueError as e:
+
+        raise HTTPException(
+            status_code=400,
+            detail=str(e)
+        )
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+
+@router.get("/download-paper/{paper_id}")
+def download_paper(
+    paper_id: int,
+    db: Session = Depends(get_db)
+):
+
+    paper = db.query(
+        GeneratedPaper
+    ).filter(
+        GeneratedPaper.id == paper_id
+    ).first()
+
+    if paper is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Paper not found"
+        )
+
+    pdf_path = generate_pdf(
+        paper.paper_content
     )
 
-@router.get("/download-paper")
-def download_paper():
-    result = generate_paper()
-    pdf_path = generate_pdf(result["paper"])
-    return FileResponse(pdf_path, media_type='application/pdf', filename="sessional_paper.pdf")
+    return FileResponse(
+        pdf_path,
+        media_type="application/pdf",
+        filename="sessional_paper.pdf"
+    )

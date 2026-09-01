@@ -243,6 +243,9 @@ async function generatePaper() {
     const data = await response.json();
 
     document.getElementById('generatedPaper').textContent = data.paper;
+    localStorage.setItem('paper_id', data.paper_id);
+    console.log('SAVED PAPER ID:', localStorage.getItem('paper_id'));
+
     goStep(4);
   } catch (error) {
     console.error(error);
@@ -252,7 +255,16 @@ async function generatePaper() {
 }
 
 function downloadPaper() {
-  window.open('/download-paper');
+  const paperId = localStorage.getItem('paper_id');
+
+  console.log('Paper ID:', paperId);
+
+  if (!paperId) {
+    alert('Paper ID not found');
+    return;
+  }
+
+  window.location.href = `/download-paper/${paperId}`;
 }
 
 window.onload = () => {

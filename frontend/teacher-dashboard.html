@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Dashboard | SessionalHub</title>
+    <link rel="stylesheet" href="/static/css/teacher-dashboard.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>SessionalHub</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#" onclick="showSection('dashboardSection', this)">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href = 'generate-paper.html'">Generate Paper</a>
+          </li>
+          <li>
+            <a href="#" onclick="showSection('evaluationSection', this)">Evaluate Answers</a>
+          </li>
+          <li>
+            <a href="#" onclick="showSection('notesSection', this)">Upload Notes</a>
+          </li>
+          <li>
+            <a href="#" onclick="showSection('syllabusSection', this)">Upload Syllabus</a>
+          </li>
+          <li>
+            <a href="#" onclick="showSection('pyqSection', this)">Upload PYQs</a>
+          </li>
+          <li>
+            <a href="#" onclick="showSection('studentsSection', this)">Students</a>
+          </li>
+          <li class="logout">
+            <a href="#" onclick="logout()">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Teacher Dashboard</h1>
+          <p>Welcome back to SessionalHub</p>
+        </div>
+        <div class="profile" id="profileBtn">
+          <img src="https://ui-avatars.com/api/?name=Teacher" alt="Profile" />
+          <div>
+            <h4>Teacher</h4>
+            <span>DBMS · CS401</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== DASHBOARD ===== -->
+      <section id="dashboardSection" class="content-section">
+        <section class="cards">
+          <div class="card">
+            <h3>Students</h3>
+            <p id="studentsCount">0</p>
+          </div>
+          <div class="card">
+            <h3>Notes Uploaded</h3>
+            <p id="notesCount">0</p>
+          </div>
+          <div class="card">
+            <h3>Papers Generated</h3>
+            <p id="papersCount">0</p>
+          </div>
+          <div class="card">
+            <h3>Sheets Evaluated</h3>
+            <p id="evalCount">0</p>
+          </div>
+        </section>
+
+        <section class="dashboard-section">
+          <h2>Quick Actions</h2>
+          <div class="action-grid">
+            <div
+              class="action-card"
+              onclick="window.location.href = 'generate-paper.html'"
+              <!-- onclick="showSection('paperSection', document.querySelectorAll('.sidebar a')[1])" -->
+            
+              Generate New Paper
+            </div>
+            <div
+              class="action-card"
+              onclick="showSection('evaluationSection', document.querySelectorAll('.sidebar a')[2])"
+            >
+              Evaluate Answer Sheets
+            </div>
+            <div
+              class="action-card"
+              onclick="showSection('notesSection', document.querySelectorAll('.sidebar a')[3])"
+            >
+              Upload Notes
+            </div>
+            <div
+              class="action-card"
+              onclick="showSection('syllabusSection', document.querySelectorAll('.sidebar a')[4])"
+            >
+              Update Syllabus
+            </div>
+          </div>
+        </section>
+
+        <section class="dashboard-section">
+          <h2>Recent Activity</h2>
+          <div class="activity-box">
+            <p>You uploaded "Unit 3 — Normalization notes" · 2 hours ago</p>
+            <p>You evaluated 24 answer sheets for Sessional Exam 1 · Yesterday</p>
+            <p>You generated a DBMS question paper · 2 days ago</p>
+          </div>
+        </section>
+      </section>
+
+      <!-- ===== GENERATE PAPER ===== -->
+      <section id="paperSection" class="content-section hidden">
+        <h2>Generate Paper</h2>
+        <div class="activity-box">
+          Reuses the same paper generator as the student side, with an extra
+          <strong>Publish to class</strong> step so the final paper gets shared with your students.
+          <br /><br />
+          <div class="action-card" onclick="window.location.href = 'generate-paper.html'">
+            Generate New Paper
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EVALUATE ANSWERS (BULK) ===== -->
+      <section id="evaluationSection" class="content-section hidden">
+        <h2>Evaluate Answer Sheets</h2>
+
+        <div class="panel">
+          <div class="panel-title">Step 1 — Upload</div>
+
+          <div class="upload-grid">
+            <div class="upload-card" id="qpCard">
+              <div class="upload-empty" id="qpEmpty">
+                <div class="upload-icon">📄</div>
+                <div class="upload-label">Question paper</div>
+                <div class="upload-hint">Single PDF, applies to all sheets</div>
+                <label class="btn btn-secondary btn-small">
+                  Browse file
+                  <input type="file" id="qpInput" accept=".pdf,.png,.jpg,.jpeg" hidden />
+                </label>
+              </div>
+              <div class="upload-filled hidden" id="qpFilled">
+                <div class="file-row">
+                  <div class="file-icon success">✓</div>
+                  <div class="file-info">
+                    <div class="file-name" id="qpName">—</div>
+                    <div class="file-meta" id="qpMeta">—</div>
+                  </div>
+                </div>
+                <button class="btn btn-ghost btn-small" onclick="resetUpload('qp')">Remove</button>
+              </div>
+            </div>
+
+            <div class="upload-card" id="asCard">
+              <div class="upload-empty" id="asEmpty">
+                <div class="upload-icon">🗂️</div>
+                <div class="upload-label">Answer sheets</div>
+                <div class="upload-hint">Select multiple files, one per student</div>
+                <label class="btn btn-secondary btn-small">
+                  Browse files
+                  <input type="file" id="asInput" accept=".pdf,.png,.jpg,.jpeg" multiple hidden />
+                </label>
+              </div>
+              <div class="upload-filled hidden" id="asFilled">
+                <div class="file-row">
+                  <div class="file-icon success">✓</div>
+                  <div class="file-info">
+                    <div class="file-name" id="asName">—</div>
+                    <div class="file-meta" id="asMeta">—</div>
+                  </div>
+                </div>
+                <button class="btn btn-ghost btn-small" onclick="resetUpload('as')">Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="uploadError" class="result-box error hidden">
+            <p class="error-msg">Please upload the question paper and at least one answer sheet.</p>
+          </div>
+
+          <div class="settings-grid">
+            <div class="setting-group">
+              <label>Subject</label>
+              <select id="subjectSelect">
+                <option>DBMS</option>
+                <option>Java</option>
+                <option>Operating System</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>Exam type</label>
+              <select id="examTypeSelect">
+                <option>Sessional Exam</option>
+                <option>End Semester</option>
+                <option>Quiz</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>Total marks</label>
+              <input type="number" id="totalMarksInput" value="30" min="10" max="100" />
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="tryEvaluate()">Evaluate All</button>
+          </div>
+        </div>
+
+        <!-- Evaluating state -->
+        <div class="panel hidden" id="evaluatingPanel">
+          <div class="evaluating-box">
+            <div class="spinner"></div>
+            <p class="evaluating-text" id="evaluatingText">Evaluating sheet 1 of 24…</p>
+          </div>
+        </div>
+
+        <!-- Results table -->
+        <div class="panel hidden" id="resultsPanel">
+          <div class="panel-title">Class results — DBMS sessional exam 1</div>
+
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Roll no</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Grade</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="resultsTableBody">
+              <tr>
+                <td>CS23-101</td>
+                <td>Aarav Sharma</td>
+                <td>27 / 30</td>
+                <td><span class="grade-badge grade-a">A</span></td>
+                <td><a href="#" class="link-view">View</a></td>
+              </tr>
+              <tr>
+                <td>CS23-102</td>
+                <td>Priya Nair</td>
+                <td>22 / 30</td>
+                <td><span class="grade-badge grade-b">B+</span></td>
+                <td><a href="#" class="link-view">View</a></td>
+              </tr>
+              <tr>
+                <td>CS23-103</td>
+                <td>Rohan Mehta</td>
+                <td>14 / 30</td>
+                <td><span class="grade-badge grade-c">C</span></td>
+                <td><a href="#" class="link-view">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="btn-row">
+            <button class="btn btn-ghost" onclick="resetEvaluation()">New Evaluation</button>
+            <button class="btn btn-primary">Download All Reports</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== UPLOAD NOTES ===== -->
+      <section id="notesSection" class="content-section hidden">
+        <h2>Upload Notes</h2>
+
+        <div class="panel">
+          <div class="settings-grid">
+            <div class="setting-group">
+              <label>Subject</label>
+              <select id="notesSubject">
+                <option>DBMS</option>
+                <option>Java</option>
+                <option>Operating System</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>Unit</label>
+              <select id="notesUnit">
+                <option>Unit 1: Introduction to DBMS</option>
+                <option>Unit 2: Relational Model</option>
+                <option>Unit 3: Normalization</option>
+                <option>Unit 4: Transactions</option>
+              </select>
+            </div>
+            <div class="setting-group full-width">
+              <label>Note title</label>
+              <input id="notesTitle" type="text" placeholder="e.g. ER model — solved examples" />
+            </div>
+            <div class="setting-group full-width">
+              <label>File</label>
+              <label class="btn btn-secondary btn-small">
+                Choose file
+                <input id="notesFile" type="file" accept=".pdf,.doc,.docx,.ppt,.pptx" hidden />
+              </label>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="uploadTeachingContent('notes')">
+              Upload Notes
+            </button>
+          </div>
+        </div>
+
+        <div class="panel-title" style="margin-top: 28px">Previously uploaded</div>
+        <div class="list-box" id="teacherNotesList">
+          <div class="list-row">
+            <span>Database concepts — intro slides</span>
+            <span class="list-meta">Unit 1 · 3 days ago</span>
+          </div>
+          <div class="list-row">
+            <span>ER model — solved examples</span>
+            <span class="list-meta">Unit 1 · 1 week ago</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== UPLOAD SYLLABUS ===== -->
+      <section id="syllabusSection" class="content-section hidden">
+        <h2>Upload / Update Syllabus</h2>
+
+        <div class="panel">
+          <div class="settings-grid">
+            <div class="setting-group">
+              <label>Subject</label>
+              <select id="syllabusSubject">
+                <option>DBMS</option>
+                <option>Java</option>
+                <option>Operating System</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>Syllabus file (optional)</label>
+              <label class="btn btn-secondary btn-small">
+                Choose PDF
+                <input id="syllabusFile" type="file" accept=".pdf" hidden />
+              </label>
+            </div>
+          </div>
+
+          <div class="info-note">
+            Editing units and topics here also updates the topic list shown in Generate Paper for
+            this subject.
+          </div>
+
+          <div class="unit-editor">
+            <div class="unit-editor-row">
+              <input type="text" value="Unit 1: Introduction to DBMS" />
+              <button class="btn btn-ghost btn-small">Remove</button>
+            </div>
+            <div class="unit-editor-row">
+              <input type="text" value="Unit 2: Relational Model" />
+              <button class="btn btn-ghost btn-small">Remove</button>
+            </div>
+            <div class="unit-editor-row">
+              <input type="text" value="Unit 3: Normalization" />
+              <button class="btn btn-ghost btn-small">Remove</button>
+            </div>
+            <button class="btn btn-secondary btn-small" style="margin-top: 8px">+ Add unit</button>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="uploadTeachingContent('syllabus')">
+              Save Syllabus
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== UPLOAD PYQs ===== -->
+      <section id="pyqSection" class="content-section hidden">
+        <h2>Upload Previous Year Papers</h2>
+
+        <div class="panel">
+          <div class="settings-grid">
+            <div class="setting-group">
+              <label>Subject</label>
+              <select id="pyqSubject">
+                <option>DBMS</option>
+                <option>Java</option>
+                <option>Operating System</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>Year</label>
+              <input id="pyqYear" type="number" placeholder="2025" min="2000" max="2030" />
+            </div>
+            <div class="setting-group">
+              <label>Exam type</label>
+              <select id="pyqExamType">
+                <option>Sessional Exam</option>
+                <option>End Semester</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>File</label>
+              <label class="btn btn-secondary btn-small">
+                Choose PDF
+                <input id="pyqFile" type="file" accept=".pdf" hidden />
+              </label>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="uploadTeachingContent('pyq')">
+              Upload PYQ
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== STUDENTS ===== -->
+      <section id="studentsSection" class="content-section hidden">
+        <h2>Students</h2>
+        <div class="panel">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Roll no</th>
+                <th>Name</th>
+                <th>Avg. score</th>
+                <th>Last active</th>
+              </tr>
+            </thead>
+            <tbody id="teacherStudentsBody">
+              <tr>
+                <td>CS23-101</td>
+                <td>Aarav Sharma</td>
+                <td>85%</td>
+                <td>Today</td>
+              </tr>
+              <tr>
+                <td>CS23-102</td>
+                <td>Priya Nair</td>
+                <td>74%</td>
+                <td>Yesterday</td>
+              </tr>
+              <tr>
+                <td>CS23-103</td>
+                <td>Rohan Mehta</td>
+                <td>46%</td>
+                <td>3 days ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <div id="profileModal" class="profile-modal">
+      <h3>Teacher</h3>
+      <p>DBMS · CS401</p>
+      <hr />
+      <br />
+      <button class="modal-btn">Edit Profile</button>
+    </div>
+
+    <script src="/static/js/teacher-dashboard.js"></script>
+  </body>
+</html>
